@@ -2,11 +2,6 @@
 #include <stdio.h>
 #include <signal.h>
 
-void sigint(int a)
-{
-  exit(0);
-}
-
 char* readString() {
   char* retval;
   scanf("%s", retval);
@@ -15,7 +10,7 @@ char* readString() {
 }
 
 int main () {
-  signal(SIGINT, sigint);
+  signal(SIGINT, exit); // Be able to press ^C to interrupt the program
 
   printf("Simple sum\n\n");
 
