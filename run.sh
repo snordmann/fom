@@ -85,5 +85,6 @@ fi
 
 if [ -z "$RUN" ]; then
   echo "Starting container"
+  echo "---------------------------------"
   runImage ${imageid}
 fi

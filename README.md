@@ -30,6 +30,7 @@ Usage: run.sh -f SRC [-t TAG] [-d]
 $ ./run.sh -f 2019-09-13/1
 Built image sha256:9814770b9d172bd695585b0c087fb2cbfae0ae81369d240910983a810f640579
 Starting container
+---------------------------------
 Hello, World!
 ```
 
