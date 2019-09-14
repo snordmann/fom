@@ -25,8 +25,8 @@ int main () {
   fflush(stdout);
   radius = atof(readString());
 
-  // acos(-1) = 𝜋
   // area = 𝜋 * radius * radius
+  // acos(-1) = 𝜋
   float area = acos(-1.0) * pow(radius, 2);
 
   printf("\n\n%g", area);

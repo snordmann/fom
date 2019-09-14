@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function usage() {
-  echo "Usage: $(basename "$0") -f SRC [-t TAG] [-d]" >&2
+  echo "Usage: $(basename "$0") -f SRC [-t TAG] [-d] [--extra-args ARGS]" >&2
   echo
   echo "  Build and run C code"
   echo
@@ -9,15 +9,16 @@ function usage() {
   echo "   -f, --file                 The path to the C source code directory to build and run"
   echo "   -t, --tag                  Set an image name"
   echo "   -d                         Don't start the container immediately"
+  echo "   --extra-args               Extra Arugments for GCC"
   echo
 
   exit 1
 }
 
-#Args: SRC_DIR
+#Args: SRC_DIR, EXTRA_ARGS
 #Returns: imageId
 function buildImage() {
-  local imageId=$(docker build -q --build-arg SRC_DIR=$1 .)
+  local imageId=$(docker build -q --build-arg SRC_DIR=$1 --build-arg GCC_EXTRA_ARGS=$2 .)
   echo $imageId
 }
 
@@ -48,6 +49,11 @@ do
       TAG="$2"
       shift 2
       ;;
+    --extra-args)
+      # TODO: validate input length and chars
+      EXTRA_ARGS="$2"
+      shift 2
+      ;;
     -d)
       RUN="1"
       shift
@@ -75,7 +81,9 @@ if [ -z "$FILE" ]; then
   exit 1
 fi
 
-imageid=$(buildImage $FILE)
+EXTRA_ARGS=${EXTRA_ARGS:-""}
+
+imageid=$(buildImage $FILE $EXTRA_ARGS)
 echo "Built image "${imageid}
 
 if [ ! -z "$TAG" ]; then
