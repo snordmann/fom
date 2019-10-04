@@ -22,7 +22,7 @@ int main () {
   float milage;
   printf("Enter the driven kilometers: ");
   fflush(stdout);
-  milage = atof(readString());
+  milage = (float) atoi(readString());
 
   float gasperkm = gas * 100 / milage;
 

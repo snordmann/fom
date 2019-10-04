@@ -23,7 +23,7 @@ int main () {
 
   // area = 𝜋 * radius * radius
   // acos(-1) = 𝜋
-  float area = acos(-1.0) * pow(radius, 2);
+  float area = M_PI * radius * radius;
 
   printf("\n\n%g", area);
 
