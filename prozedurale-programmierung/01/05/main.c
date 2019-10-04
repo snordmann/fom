@@ -2,11 +2,6 @@
 #include <stdio.h>
 #include <signal.h>
 
-void sigint(int a)
-{
-  exit(0);
-}
-
 char* readString() {
   char* retval;
   scanf("%s", retval);
@@ -15,7 +10,7 @@ char* readString() {
 }
 
 int main () {
-  signal(SIGINT, sigint);
+  signal(SIGINT, exit);
 
   printf("gas calculator\n\n");
 
@@ -31,7 +26,7 @@ int main () {
 
   float gasperkm = gas * 100 / milage;
 
-  printf("\n\n%g", gasperkm);
+  printf("\n\nThe fuel economy per 100km is %g.\n", gasperkm);
 
   return 0;
 }

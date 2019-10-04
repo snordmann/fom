@@ -26,7 +26,7 @@ int main () {
 
   float sum = num1 + num2;
 
-  printf("\n\n%g + %g = %g", num1, num2, sum);
+  printf("\n\n%g + %g = %g\n", num1, num2, sum);
 
   return 0;
 }
