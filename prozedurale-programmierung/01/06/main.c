@@ -3,10 +3,6 @@
 #include <signal.h>
 #include <math.h>
 
-void sigint(int a)
-{
-  exit(0);
-}
 
 char* readString() {
   char* retval;
@@ -16,7 +12,7 @@ char* readString() {
 }
 
 int main () {
-  signal(SIGINT, sigint);
+  signal(SIGINT, exit);
 
   printf("cirlce area calculator\n\n");
 

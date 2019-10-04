@@ -17,16 +17,16 @@ int main () {
   float gas;
   printf("Enter the complete gas usage: ");
   fflush(stdout);
-  gas = (float) atoi(readString());
+  gas = atof(readString());
 
   float milage;
   printf("Enter the driven kilometers: ");
   fflush(stdout);
-  milage = (float) atoi(readString());
+  milage = atof(readString());
 
   float gasperkm = gas * 100 / milage;
 
-  printf("\n\nThe fuel economy per 100km is %g.\n", gasperkm);
+  printf("\n\nThe fuel economy is %g l/100km.\n", gasperkm);
 
   return 0;
 }
