@@ -3,10 +3,10 @@
 #include <signal.h>
 #include <math.h>
 
-#define SECONDS_IN_A_YEAR 31556952
-#define SECONDS_IN_A_WEEK 604800
-#define SECONDS_IN_A_DAY 86400
-#define SECONDS_IN_AN_HOUR 3600
+#define   SECONDS_IN_A_YEAR 31556952
+#define   SECONDS_IN_A_WEEK 604800
+#define    SECONDS_IN_A_DAY 86400
+#define  SECONDS_IN_AN_HOUR 3600
 #define SECONDS_IN_A_MINUTE 60
 
 char* readString() {
@@ -26,22 +26,23 @@ int main () {
   fflush(stdout);
   seconds = atoi(readString());
 
-  long years, weeks, days, hours, minutes;
-
   long secondsLeft = seconds;
-  years = secondsLeft / SECONDS_IN_A_YEAR;
-  if (years != 0) {
-    secondsLeft -= (int) years * SECONDS_IN_A_YEAR;
-  } else {
-    weeks = secondsLeft / SECONDS_IN_A_WEEK;
-    secondsLeft -= (int) weeks * SECONDS_IN_A_WEEK;
-  }
-  days = secondsLeft / SECONDS_IN_A_DAY;
-  secondsLeft -= (int) days * SECONDS_IN_A_DAY;
-  hours = secondsLeft / SECONDS_IN_AN_HOUR;
-  secondsLeft -= (int) hours * SECONDS_IN_AN_HOUR;
-  minutes = secondsLeft / SECONDS_IN_A_MINUTE;
-  secondsLeft -= (int) minutes * SECONDS_IN_A_MINUTE;
+
+  long years = secondsLeft / SECONDS_IN_A_YEAR;
+  long weeks = secondsLeft / SECONDS_IN_A_WEEK;
+  if (years != 0)
+    secondsLeft %= SECONDS_IN_A_YEAR;
+  else
+    secondsLeft %= SECONDS_IN_A_WEEK;
+
+  long days = secondsLeft / SECONDS_IN_A_DAY;
+  secondsLeft %= SECONDS_IN_A_DAY;
+
+  long hours = secondsLeft / SECONDS_IN_AN_HOUR;
+  secondsLeft %= SECONDS_IN_AN_HOUR;
+
+  long minutes = secondsLeft / SECONDS_IN_A_MINUTE;
+  secondsLeft %= SECONDS_IN_A_MINUTE;
 
   if (years != 0) {
     printf("\n\n%ds = %da %dd %dh %dm %ds\n", seconds, years, days, hours, minutes, secondsLeft);
