@@ -57,5 +57,6 @@ int main () {
   } else {
     printf("\n\n%ds = %ds\n", seconds, secondsLeft);
   }
+
   return 0;
 }
