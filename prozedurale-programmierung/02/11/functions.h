@@ -1,0 +1,1 @@
+float gesamtpreisberechnen(float einzelpreis, int menge);
