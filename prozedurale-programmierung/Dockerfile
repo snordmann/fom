@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 ARG SRC_DIR="."
 ARG GCC_EXTRA_ARGS=""
 COPY ${SRC_DIR} .
-RUN gcc -o /app ${GCC_EXTRA_ARGS} $(ls *.c)
+RUN gcc -Werror-implicit-function-declaration -o /app ${GCC_EXTRA_ARGS} $(ls *.c)
 
 FROM alpine
 COPY --from=builder /app /app
