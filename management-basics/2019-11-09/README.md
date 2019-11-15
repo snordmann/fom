@@ -260,5 +260,118 @@ Seite 89 im Skript
 - außerordentlich wird jetzt außergewöhnlich
 
 --> Hausaufgabe: Salden der GuV auswenig lernen
+--> Fallstudie: Aufgabe 2 fertig machen
 
+## Management Basics Kapitel 2
 
+- Liquiditätsmanagement
+- Investition (Taschenrechner benötigt)
+- Finanzierung (Taschenrechner benötigt)
+
+### Lernziele Liquiditätsmanagement
+
+- Bedeutung der Liquidität
+- Bewertung der Liquidität
+- Planung der Liquidität
+- Cashflow, Fluss der Liquidität im Unternehmen
+- Cash Pooling und Cash Management
+
+### Bedeutung der Liquisität
+
+Größe des Umlaufvermögens
+
+#### Generelle Bedeutung
+
+Person ist zahlungsfähig = hat Umlaufvermögen
+
+#### Im Unternehmensumfeld
+
+Wenn keine Liquidität gegeben ist, kann das Unternehmen seiner Zahlungsfähigkeit
+nicht nachkommen
+
+Unternehmen muss Indolvenz anmelden, wenn Unternehmen 10% seiner
+Verbindlichkeiten im Zeitraum von 30 Tagen nicht nachkommen kann.
+
+Liquidität ist für ein Unternehmen so wichtig, wie die Luft zum Atmen.
+
+#### Liquiditätsmanagement
+
+Soll Sicherstellen, dass einzahlungen und liquiditätsreserven abzüglich
+der auszahlungen tagesgenau geplant werden.
+
+Liquide mittel sollten Liquide Mittel immer positiv sein.
+Wenn Liquide Mittel im Laufe eines Tages oder einer Woche negativ sein, müssen
+Kredite aufgenommen werden, Reserven auflösen, zahlung auf Ziel bei Lieferanten.
+Wenn Liquide Mittel über längeren Zeitraum negativ sind, gibt es Probleme.
+
+Jeden Tag sicherstellen, dass es keine Unterversorgung gibt. Ungefähr im
+Gleichgewicht.
+Problem, wenn zu viel Geld auf der Bank liegt, kann nicht investiert werden ->
+Senkung der Rentabilität.
+SO viel Liquidität vorhalten so viel wie möglich, so wenig wie nötig.
+
+##### Primärliquidität
+
+- Kassenbestand, Sichtguthaben
+
+##### Sekundärliquidität
+
+Etwas, was schnell in Geld umgewandelt werden kann.
+
+- Kreditlinien
+- Wertpapiere, ...
+
+#### Liquiditätsplanung
+
+Kosten und Umsätze reichen nicht. Es kann sein, dass Forderungen nicht erfüllt
+werden.
+
+Wichtiger sind die Zahlungsströme.
+
+#### Liquiditätsvorschau
+
+|                      | 09.11. | 10.11. | 11.11 | 12.11. |
+| -------------------- | ------ | ------ | ----- | ------ |
+| Positive Mittel      | +      | +      |       | +      |
+| Nagative Mittel      | -      | -      | -     | -      |
+| SUmme Liquide Mittel | +      | -      | -     | +      |
+
+Tagesabhängig gucken ,wie viel Geld vorhanden ist, und wie viel zu erwarten ist.
+
+#### Liquiditätsgrade
+
+##### Definitionen
+
+- kurzfristig ist branchenabhängig
+  - Bei Flugzeugherstellern könnte es 6 Monate sein
+  - Bei Supermärkten könnte es 15 Tage sein
+- kurzf. Verbindl.
+  - in den nächsten (bspw.) 30 Tagen fällig
+  - Verbindlichkeiten aus Lieferungen und Leistungen
+- Zahlungsmittel
+  - Bank und Kasse
+- kurzf. Forderungen
+  - in den nächsten (bspw.) 30 Tagen fällige Einzahlungen
+  - kurzfristige Forderungen aus Lieferungen und Leistungen
+
+##### 3 Grade der Liquidität
+
+Dies sind die allgemein bekannten Kennzahlen:
+
+1. Cash Ratio
+   - Zahlungsmittel / kurzf. Verbindl.
+   - Richtwert ~= 50%, nicht ernst nehmen
+2. Quick Ratio
+   - (Zahlungsmittel + kurzf. Ford.) / kurzf. Verbindl.
+   - Richtwert ~= 100%, ernst nehmen
+   - Realistischer als Grad 1, weil Forderungen, die demnächst getilgt werden,
+     und Verbindlkichkeiten, die demnchst getilgt werden, verglichen werden.
+3. Current Ratio
+   - (Zahlungsmittel + kurz. Ford. + Vorräte + fertige & unfertige erzeugnisse)
+     / kurzf. Verbindl.
+   - Richtwert ~= 200%, überhaupt nicht ernst nehmen
+   - Die Produkte müssen eventuell noch hersgestellt werden
+   - Es kann sein, dass die Produkte nicht gekauft werden
+   - Funktionert am besten (bzw. nur) für Produkte, die sehr schnell gefertigt
+     werden können und schnell verkauft werden können.
+   - Diese Kennzahl ist recht einfach zu fälschen

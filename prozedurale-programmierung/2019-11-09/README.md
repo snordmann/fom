@@ -113,4 +113,3 @@ Einbindung in das Hauptprogramm:
 
 Durch die Anführungszeichen wird dem Compiler gesagt, dass es zuerst im lokalen
 Verzeichnis gucken soll und erst danach die Standardbibliotheken suchen soll.
-
