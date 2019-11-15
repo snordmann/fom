@@ -21,8 +21,8 @@ double func (double x, double y) {
 Warnung:
 
 ```text
-warning: implicit declaration of functino 'func'
-warning: format 'if' expects argument of type 'double', but argument 2 has type 'intÄ
+warning: implicit declaration of function 'func'
+warning: format 'if' expects argument of type 'double', but argument 2 has type 'int'
 ```
 
 ### Mögliche Lösungen
@@ -109,7 +109,22 @@ Einbindung in das Hauptprogramm:
 
 ```c
 #include "taschenrechner.h"
+
+int main(void) {
+  int zahl1, zahl2, ergebnis;
+
+  zahl1 = eingabeZahl();
+  zahl2 = eingabeZahl();
+
+  ergebnis = multipilizere(zahl1, zahl2);
+  ausgabeErgebnis(ergebnis);
+
+  return 0;
+}
 ```
 
 Durch die Anführungszeichen wird dem Compiler gesagt, dass es zuerst im lokalen
 Verzeichnis gucken soll und erst danach die Standardbibliotheken suchen soll.
+
+Danach kann man die Funktionen wie normal benutzen, als ob Sie oberhalb der main
+funktion deklariert wurden.
