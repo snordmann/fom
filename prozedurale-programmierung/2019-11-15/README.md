@@ -13,9 +13,11 @@
 
 ## Zeiger in C
 
-- Zeiger sind Adressen im Arbeitsspeicher
+- Zeiger sind Adressen im Arbeitsspeicher, die auf eine andere Variable zeigen
 - Wurde schon benutzt
   - Beispielsweise der Addressoperator im scanf
+- Deklaration mit dem typen, einem Stern `*` und den namen des zeigers
+  - Beispiel: `int *zeiger` oder `float *ergebnis`
 
 Beispiel:
 
@@ -128,7 +130,10 @@ void einlesen(int *num1, int *num2) {
 int main(void) {
   int zahl1, zahl2;
   einlesen(&zahl1, &zahl2);
-  printf("Produkt: %d\n", zahl1 * zahl2);
+  printf("%d * %d = %d\n", zahl1, zahl2, zahl1 * zahl2);
 }
-
 ```
+
+Man merke, dass man im scanf muss jetzt kein Addressoperator übergeben werden.
+Das wird weiter unten bei dem Funktionsaufruf von einlesen gemacht und der
+Zeiger wird einfach nur weitergeben an die scanf Funktion.
