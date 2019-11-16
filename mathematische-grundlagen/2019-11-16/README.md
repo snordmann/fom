@@ -46,15 +46,12 @@ $$C=\{\}$$
 #### Probleme, wenn man viele Elemente schreiben möchte
 
 - Beispiele
-  - Die Menge der Zahlen von 1 bis 49
-
-    $A=\{1,2,3,...,48,49\}$
-  - Die Menge aller ungeraden Zahlen
-
-    $U=\{1,3,5,7,9,11,...\}$
-  - Die Menge aller ungeraden Primzahlen
-
-    $P=\{x ; x\ ist\ eine\ Primzahl\ und\ ist\ ungerade\}$
+  - Die Menge der Zahlen von 1 bis 49 kann als $A=\{1,2,3,...,48,49\}$
+    geschrieben werden.
+  - Die Menge aller ungeraden Zahlen kann als $U=\{1,3,5,7,9,11,...\}$
+    geschrieben werden.
+  - Die Menge aller ungeraden Primzahlen kann als $P=\{x \in \N;\ x\ ist\ eine\ Primzahl\ und\ ist\ ungerade\}$
+    geschrieben werden.
 
 #### Mengenoperationen
 
@@ -209,3 +206,162 @@ $$\{x\in \R; a \leq x < b\}$$
 oder
 
 $$\{x\in \R; a < x \leq b\}$$
+
+## Vollständige Induktion
+
+- DIES IST EIN SEHR WICHTIGES THEMA!!!!
+- KLAUSURERELEVANT
+
+Generelle Fragestellung: Wie kann ich was für alle Zahlen beweisen?
+
+Beispiel:
+
+- Wie kann ich viele Zahlen addieren?
+  - Von $1+2+3+4+5+...+100$
+  - Feststellung:
+    - Wenn man die erste und letzte Zahl addiert, bekommt man 101.
+    - Wenn man die zweite und vorletzte Zahl addiert, bekommt man 101.
+    - Lösung: $\frac{100}{2}(1+100) = 505$
+  - Nun muss bewiesen werden, dass $\frac{n}{2}(1+n)$ (bzw. $\frac{n(1+n)}{2}$) für alle Zahlen gilt.
+
+### Drei Schritte der Induktion
+
+1. Aussage muss für $n=n_0$ gezeigt werden.
+1. Es wird angenommen, dass die Aussage für eine natürliche Zahl $n$ mit $n\geq n_0$ gilt.
+1. Unter der Annahme ist zu zeigen, dass die Aussage dann auch für $n+1$ gilt.
+
+### Beispiel 1.14
+
+Behauptet wird: Für alle $n \in \N$ gilt:
+
+$$ \sum^n_{i=1}{i}=\frac{n(n+1)}{2} $$
+
+#### Schritt 1: Induktionsannahme
+
+In diesem Fall wird angenommen, dass eine natürliche Zahl $n$ gilt:
+
+$$ 1+2+3+...+n=\frac{n(n+1)}{2} $$
+
+Formel für $n+1$ aufstellen.
+
+$$ 1+2+3+...+n+(n+1)=\frac{(n+1)\big((n+1)+1\big)}{2} $$
+
+Einsetzen der Formel für die Summe der Zahlen bis $n$.
+
+$$ \frac{n(n+1)}{2}+(n+1)=\frac{(n+1)\big((n+1)+1\big)}{2} $$
+
+Nun muss nur noch überprüft werden, ob beide Seiten gleich sind.
+
+$$ \frac{n^2+n}{2}+(n+1)=\frac{(n+1)(n+2)}{2} $$
+
+$$ \frac{n^2+n}{2}+(n+1)=\frac{n^2+3n+2}{2} $$
+
+$$ n^2+n+2(n+1)=n^2+3n+2 $$
+
+$$ n^2+n+2n+2=n^2+3n+2 $$
+
+$$ n^2+3n+2=n^2+3n+2$$
+
+### Beispiel 1.15
+
+Behauptung: Für alle $n \in \N$ gilt:
+
+$$ 1+3+5+...+(2n-1) = n^2 $$
+
+Annahme stimmt für $n=1$:
+
+$$ 1 = 1^2  = 1 $$
+
+Annahme stimmt für $n=2$:
+
+$$ 1 + 3 = 2^2  = 4 $$
+
+Einsetzen von $n+1$
+
+$$ 1+3+5+...+(2n-1) + (2(n+1)-1) = (n+1)^2 $$
+
+Einsetzen der Annahme in die Summe:
+
+$$ n^2 + (2(n+1)-1) = (n+1)^2 $$
+
+Umformen:
+
+$$ n^2 + (2n + 2 - 1) = n^2 + 2n + 1 $$
+
+$$ n^2 + 2n + 1 = n^2 + 2n + 1 $$
+
+### Beispiel einer falschen Annahme
+
+Für alle $n \in \N$ gilt:
+
+$$n^3 \leq n^2$$
+
+Annahme für $n=1$ überprüfen:
+
+$$1^3 \leq 1^2,\ weil\ 1^3 = 1\ und\ 1^2 = 1 $$
+
+Weiterführen für $n+1$:
+
+$$(n+1)^3\leq(n+1)^2$$
+
+$$n^3+3n^2+3n+1\leq n^2+2n+1$$
+
+$$n^3+2n^2+n\leq 0$$
+
+Widerspruch: Für kein positives $n$ ist die Formel null oder negativ.
+
+### Übung 1.16
+
+Für alle $n\in \N$ gilt:
+
+$$ 2+5+8+...+(3n-1)=\frac{n(3n+1)}{2} $$
+
+Zeigen, dass es für $n=1$ gilt:
+
+$$ 2 = \frac{1*(3+1)}{2} = \frac{4}{2} = 2 $$
+
+Zeigen, dass es für $n+1$ gilt:
+
+$$ 2+5+8+...+(3n-1) + (3(n+1)-1)=\frac{(n+1)\big(3(n+1)+1\big)}{2} $$
+
+Einsetzen der Annahme:
+
+$$ \frac{n(3n+1)}{2} + (3(n+1)-1)=\frac{(n+1)\big(3(n+1)+1\big)}{2} $$
+
+Umformen:
+
+$$ \frac{3n^2+n}{2} + (3n+3-1)=\frac{(n+1)(3n+3+1)}{2} $$
+
+$$ \frac{3n^2+n}{2} + (3n+2)=\frac{(n+1)(3n+4)}{2} $$
+
+$$ \frac{3n^2+n}{2} + (3n+2)=\frac{3n^2 +3n+4n+4}{2} $$
+
+$$ \frac{3n^2+n}{2} + (3n+2)=\frac{3n^2 +7n+4}{2} $$
+
+$$ 3n^2+n + 2(3n+2)=3n^2 +7n+4 $$
+
+$$ 3n^2+n + 6n+4=3n^2 +7n+4 $$
+
+$$ 3n^2+7n+4=3n^2 +7n+4 $$
+
+Annahme ist wahr.
+
+==> Hausaufgaben 1.17 und 1.18 und 1.20
+
+### Beispiel 1.17
+
+TBD
+
+### Beispiel 1.18
+
+TBD
+
+### Beispiel 1.20
+
+Für alle $n\in\N$ gilt:
+
+$$2^n > n$$
+
+## Nächstes Mal
+
+- Lineare Gleichungssysteme, Vektoren und Matrizen
