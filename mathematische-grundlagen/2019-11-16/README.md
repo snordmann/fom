@@ -38,7 +38,9 @@ Themen:
 - Elemente in geschweifte Klammern, mit Komma getrennt
 
 $$A=\{1,2,3\}$$
+
 $$K=\{Apfel,Birne,Banane\}$$
+
 $$C=\{\}$$
 
 #### Probleme, wenn man viele Elemente schreiben möchte
@@ -59,8 +61,11 @@ $$C=\{\}$$
 ##### Teilmengen und echte Teilmengen
 
 $$ x \in A $$
+
 $$ B \subset A $$
+
 $$ B \subseteq A \iff \forall x \in A : x \in B $$
+
 $$ B \subset A \iff B \subseteq A \cup A \neq B $$
 
 Echte Teilmenge ist Teilmenge und die Mengen nicht gleich sind (mindestens ein
@@ -69,13 +74,17 @@ Element nicht in der Obermenge).
 ##### Schnittmenge
 
 $$ A=\{1,2,3\} $$
+
 $$ B=\{2,3,4\} $$
+
 $$ A \cap B=\{2,3\} $$
 
 ##### Vereinigung
 
 $$ A=\{1,2,3\} $$
+
 $$ B=\{2,3,4\} $$
+
 $$ A \cup B=\{1,2,3,4\} $$
 
 ==> Hausaufgabe: Alle Regeln (Assoziativ, Distributiv, ...) mit Mengen
@@ -88,7 +97,9 @@ ausprobieren
 Analog zu Logik
 
 $$ \overline{A\cap B} $$
+
 ist das selbe wie:
+
 $$ \overline{A} \cup \overline{B} $$
 
 ##### Kartesische Produkt
@@ -100,6 +111,7 @@ $$ A \times B = \{(a,b); a \in A, b \in B\} $$
 Beispiel:
 
 $$ A=\{1,2\}\ und\ B=\{3,4,5\} $$
+
 $$ A \times B = \{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\} $$
 
 ## Relation
@@ -121,7 +133,9 @@ Eine Relation ist eine Teilmenge von dem kartesischem Produkt
 
 Beispiel:
 $$ A=\{1,2\}\ und\ B=\{3,4,5\} $$
+
 $$ A \times B = \{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\} $$
+
 $$ R = \{(1,3),(2,3)\} $$
 
 #### Relation mit Bedingungen
@@ -135,7 +149,7 @@ $$ R = \{(s_1, s_2); s_1 \in A, s_2 \in B, s_1\ liegt\ im\ selben\ Bundesland\ w
 
 Aus dieser Menge könnte man folgende Paare bilden:
 
-<!-- TODO -->
+$$\{(Kiel, Flensburg),\ (Hannover, Göttigen),\ (Flensburg, Kiel),\ (Bremen, Bremen),\ (Bremen, Bremen),\ ...\}$$
 
 ### Äquivalenzrelationen
 
@@ -147,7 +161,9 @@ $$\forall x \in R\ gilt\ (a,a) \in R$$
 
 Beispiele:
 
-- <!-- TODO -->
+- Kleiner-gliech bei reellen Zahlen
+
+  Für alle reellen Zahlen gilt $x \leq x$.
 
 #### symmetrisch
 
@@ -157,7 +173,9 @@ $$\forall x \in R\ gilt\ (a,b) \in R \land (b,a) \in R$$
 
 Beispiele:
 
-- <!-- TODO -->
+- Gleichheit der reellen Zahlen
+
+  Aus $x=y$  folgt $y=x$.
 
 #### transitiv
 
