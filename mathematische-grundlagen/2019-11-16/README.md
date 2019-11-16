@@ -8,7 +8,7 @@ Generelle Bemerkungen:
 
 - Dieser Bereich kann umfangreich sein
 - Beispiele können nur als Hausaufgaben gemacht werden
-  - Bei Fragen E-Mail an Prof senden
+  - Bei Fragen E-Mail an Espitalier senden
 - In der Vorlesung wird dieser Bereich schnell abgehandelt
 
 Themen:
@@ -60,8 +60,8 @@ $$C=\{\}$$
 
 $$ x \in A $$
 $$ B \subset A $$
-$$ B \subseteq A \Leftrightarrow \forall x \in A : x \in B $$
-$$ B \subset A \Leftrightarrow B \subseteq A \cup A \neq B $$
+$$ B \subseteq A \iff \forall x \in A : x \in B $$
+$$ B \subset A \iff B \subseteq A \cup A \neq B $$
 
 Echte Teilmenge ist Teilmenge und die Mengen nicht gleich sind (mindestens ein
 Element nicht in der Obermenge).
@@ -101,3 +101,93 @@ Beispiel:
 
 $$ A=\{1,2\}\ und\ B=\{3,4,5\} $$
 $$ A \times B = \{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\} $$
+
+## Relation
+
+- Kartesiches Produkt
+- Relation
+- Äquivalenzrelationen
+  - reflexiv
+  - symmetrisch
+  - transitiv
+
+### Kartesisches Produkt
+
+siehe oben
+
+### Relationen
+
+Eine Relation ist eine Teilmenge von dem kartesischem Produkt
+
+Beispiel:
+$$ A=\{1,2\}\ und\ B=\{3,4,5\} $$
+$$ A \times B = \{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\} $$
+$$ R = \{(1,3),(2,3)\} $$
+
+#### Relation mit Bedingungen
+
+Seien $A = B = Menge\ der\ deutschen\ Städte$.
+
+Ich möchte nun Städtepaare haben, die im selben Bundesland sind, kann man es
+schreiben als:
+
+$$ R = \{(s_1, s_2); s_1 \in A, s_2 \in B, s_1\ liegt\ im\ selben\ Bundesland\ wie\ s_2\} $$
+
+Aus dieser Menge könnte man folgende Paare bilden:
+
+<!-- TODO -->
+
+### Äquivalenzrelationen
+
+#### reflexiv
+
+Eine Relation ist reflexiv wenn:
+
+$$\forall x \in R\ gilt\ (a,a) \in R$$
+
+Beispiele:
+
+- <!-- TODO -->
+
+#### symmetrisch
+
+Eine Relation ist symmetrisch wenn:
+
+$$\forall x \in R\ gilt\ (a,b) \in R \land (b,a) \in R$$
+
+Beispiele:
+
+- <!-- TODO -->
+
+#### transitiv
+
+Eine Relation ist transitiv wenn:
+
+$$(a,b) \in R\ und\ (b,c) \in R\ ist\ auch\ (a,c) \in R$$
+
+Beispiele:
+
+- Reelle Zahlen
+  
+  Wenn $x<y$ und $y<z$, gilt $x<z$.
+- Logik
+  
+  Aus $A\implies B$ und $B\implies C$ folgt $A\implies C$.
+
+## Eingrenzen von Mengen
+
+### Abgeschlossenes Interval
+
+$$\{x\in \R; a\leq x\leq b\}$$
+
+### Offenes Interval
+
+$$\{x\in \R; a < x < b\}$$
+
+### Halboffenes Intervall
+
+$$\{x\in \R; a \leq x < b\}$$
+
+oder
+
+$$\{x\in \R; a < x \leq b\}$$
