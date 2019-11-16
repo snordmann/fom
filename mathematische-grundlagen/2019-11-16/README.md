@@ -50,7 +50,7 @@ $$C=\{\}$$
     geschrieben werden.
   - Die Menge aller ungeraden Zahlen kann als $U=\{1,3,5,7,9,11,...\}$
     geschrieben werden.
-  - Die Menge aller ungeraden Primzahlen kann als $P=\{x \in \N;\ x\ ist\ eine\ Primzahl\ und\ ist\ ungerade\}$
+  - Die Menge aller ungeraden Primzahlen kann als $P=\{x \in \mathbb{N};\ x\ ist\ eine\ Primzahl\ und\ ist\ ungerade\}$
     geschrieben werden.
 
 #### Mengenoperationen
@@ -63,7 +63,7 @@ $$ B \subset A $$
 
 $$ B \subseteq A \iff \forall x \in A : x \in B $$
 
-$$ B \subset A \iff B \subseteq A \cup A \neq B $$
+$$ B \subset A \iff B \subseteq A \cup A \mathbb{N}eq B $$
 
 Echte Teilmenge ist Teilmenge und die Mengen nicht gleich sind (mindestens ein
 Element nicht in der Obermenge).
@@ -193,19 +193,19 @@ Beispiele:
 
 ### Abgeschlossenes Interval
 
-$$\{x\in \R; a\leq x\leq b\}$$
+$$\{x\in \mathbb{R}; a\leq x\leq b\}$$
 
 ### Offenes Interval
 
-$$\{x\in \R; a < x < b\}$$
+$$\{x\in \mathbb{R}; a < x < b\}$$
 
 ### Halboffenes Intervall
 
-$$\{x\in \R; a \leq x < b\}$$
+$$\{x\in \mathbb{R}; a \leq x < b\}$$
 
 oder
 
-$$\{x\in \R; a < x \leq b\}$$
+$$\{x\in \mathbb{R}; a < x \leq b\}$$
 
 ## Vollständige Induktion
 
@@ -232,7 +232,7 @@ Beispiel:
 
 ### Beispiel 1.14
 
-Behauptet wird: Für alle $n \in \N$ gilt:
+Behauptet wird: Für alle $n \in \mathbb{N}$ gilt:
 
 $$ \sum^n_{i=1}{i}=\frac{n(n+1)}{2} $$
 
@@ -264,7 +264,7 @@ $$ n^2+3n+2=n^2+3n+2$$
 
 ### Beispiel 1.15
 
-Behauptung: Für alle $n \in \N$ gilt:
+Behauptung: Für alle $n \in \mathbb{N}$ gilt:
 
 $$ 1+3+5+...+(2n-1) = n^2 $$
 
@@ -292,7 +292,7 @@ $$ n^2 + 2n + 1 = n^2 + 2n + 1 $$
 
 ### Beispiel einer falschen Annahme
 
-Für alle $n \in \N$ gilt:
+Für alle $n \in \mathbb{N}$ gilt:
 
 $$n^3 \leq n^2$$
 
@@ -312,7 +312,7 @@ Widerspruch: Für kein positives $n$ ist die Formel null oder negativ.
 
 ### Übung 1.16
 
-Für alle $n\in \N$ gilt:
+Für alle $n\in \mathbb{N}$ gilt:
 
 $$ 2+5+8+...+(3n-1)=\frac{n(3n+1)}{2} $$
 
@@ -358,7 +358,7 @@ TBD
 
 ### Beispiel 1.20
 
-Für alle $n\in\N$ gilt:
+Für alle $n\in\mathbb{N}$ gilt:
 
 $$2^n > n$$
 
