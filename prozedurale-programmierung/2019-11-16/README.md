@@ -237,9 +237,9 @@ int messwerte[5] = {3, 7, 2, 1, -5};
 
 Der Array sieht in etwa so aus:
 
-| Index | `0` | `1` | `2` | `3` | `4`  |
-| ----- | --- | --- | --- | --- | ---- |
-| Wert  | `3` | `7` | `2` | `1` | `-5` |
+| Index |  `0` |  `1` |  `2` |  `3` |  `4` |
+| ----- | ---: | ---: | ---: | ---: | ---: |
+| Wert  |  `3` |  `7` |  `2` |  `1` | `-5` |
 
 Nun können wir einen Zeiger benutzen, um die aktuelle Position im Array zu
 kennzeichen.
@@ -250,10 +250,10 @@ kennzeichen.
 
    Somit befindet sich der Zeiger an der nullten Stelle im Array:
 
-   | Index | `0` | `1` | `2` | `3` | `4`  |
-   | ----- | --- | --- | --- | --- | ---- |
-   | Wert  | `3` | `7` | `2` | `1` | `-5` |
-   | Pos   | x   |     |     |     |      |
+   | Index |  `0` |  `1` |  `2` |  `3` |  `4` |
+   | ----- | ---: | ---: | ---: | ---: | ---: |
+   | Wert  |  `3` |  `7` |  `2` |  `1` | `-5` |
+   | Pos   |    x |      |      |      |      |
 
 1. Man kann den Wert des Positionszeigers abfragen:
 
@@ -272,10 +272,10 @@ kennzeichen.
    printf("%d", *pos);
    ```
 
-   | Index | `0` | `1` | `2` | `3` | `4`  |
-   | ----- | --- | --- | --- | --- | ---- |
-   | Wert  | `3` | `7` | `2` | `1` | `-5` |
-   | Pos   |     | x   |     |     |      |
+   | Index |  `0` |  `1` |  `2` |  `3` |  `4` |
+   | ----- | ---: | ---: | ---: | ---: | ---: |
+   | Wert  |  `3` |  `7` |  `2` |  `1` | `-5` |
+   | Pos   |      |    x |      |      |      |
 
    Die Ausgabe wird also `7` sein, weil das die Position des Zeigers ist.
 
@@ -286,10 +286,10 @@ kennzeichen.
    printf("%d", *pos);
    ```
 
-   | Index | `0` | `1` | `2` | `3` | `4`  |
-   | ----- | --- | --- | --- | --- | ---- |
-   | Wert  | `3` | `7` | `2` | `1` | `-5` |
-   | Pos   |     |     |     | x   |      |
+   | Index |  `0` |  `1` |  `2` |  `3` |  `4` |
+   | ----- | ---: | ---: | ---: | ---: | ---: |
+   | Wert  |  `3` |  `7` |  `2` |  `1` | `-5` |
+   | Pos   |      |      |      |    x |      |
 
    Ausgabe: `1`
 
@@ -298,9 +298,9 @@ kennzeichen.
    printf("%d", *pos);
    ```
 
-   | Index | `0` | `1` | `2` | `3` | `4`  |
-   | ----- | --- | --- | --- | --- | ---- |
-   | Wert  | `3` | `7` | `2` | `1` | `-5` |
-   | Pos   |     |     | x   |     |      |
+   | Index |  `0` |  `1` |  `2` |  `3` |  `4` |
+   | ----- | ---: | ---: | ---: | ---: | ---: |
+   | Wert  |  `3` |  `7` |  `2` |  `1` | `-5` |
+   | Pos   |      |      |    x |      |      |
 
    Ausgabe: `2`
