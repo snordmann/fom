@@ -328,3 +328,11 @@ pos += 4;
 printf("%d", *pos); // Ausgabe: 9
 
 ```
+
+## Zusammenfassung
+
+- Array
+  - Ermöglichen mehrere Wert des gleichen Datentypes abzuspeichern
+  - Zugriff mit eckigen Klammern oder Zeigerarithmetik
+    - Zeigerarithmetik
+      - Man addiert den Zeiger und springt durch die Positionen im Array
