@@ -304,3 +304,27 @@ kennzeichen.
    | Pos   |      |      |    x |      |      |
 
    Ausgabe: `2`
+
+### Zeigerarithmetik mit mehrdimenionalen Arrays
+
+```c
+int zweidimArray[3][3] = { {1,2,3},
+                          {4,5,6},
+                          {7,8,9} };
+
+int *pos;
+pos = &zweidimArray[0][0]; // am besten in dieser langen Schreibweise zuweisen
+
+printf("%d", *pos); // Ausgabe: 1
+pos += 3;
+printf("%d", *pos); // Ausgabe: 4
+
+//Diagonale ausgeben
+pos = &zweidimArray[0][0];
+printf("%d", *pos); // Ausgabe: 1
+pos += 4;
+printf("%d", *pos); // Ausgabe: 5
+pos += 4;
+printf("%d", *pos); // Ausgabe: 9
+
+```
