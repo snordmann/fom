@@ -350,17 +350,77 @@ Annahme ist wahr.
 
 ### Beispiel 1.17
 
-TBD
+Fakultät $!$ ist definiert als das Produkt von allen zahlen kleiner als die
+zahl. Beispiel: $3! = 3*2*1$ oder $6! = 6*5*4*3*2*1$
+
+Annahme: $n \in \mathbb{N},\ n \leq 3$ gilt:
+
+$$3 * 3!+ 4* 4! + 5*5! + ... + n * n! = (n+1)! - 6$$
+
+Zeigen, dass es für $n=3$ gilt:
+
+$$ 3*3! = 18 = (3+1)! - 6$$
+
+Formel für $n+q$ erstellen:
+
+$$3 * 3!+ 4* 4! + 5*5! + ... + n * n! + (n+1) * (n+1)! = \big((n+1)+1\big)! -
+6$$
+
+EInsetzen der ursprünglichen Formel:
+
+$$(n+1)! - 6 + (n+1) * (n+1)! = \big((n+1)+1\big)! -
+6$$
+
+Umformen!!!!!!
+
+$$(n+1)! - 6 + (n+1) * (n+1)! = (n+2)! - 6$$
+
+$$(n+1)! + (n+1) * (n+1)! = (n+2)!$$
+
+$$(n+1)! * (1+ (n+1)) = (n+2)!$$
+
+$$(n+1)! * (1+ (n+1)) = (n+2)(n+1)!$$
+
+$$1+ (n+1) = n+2$$
+
+$$n+2 = n+2$$
+
+Annahme stimmt!!!
 
 ### Beispiel 1.18
 
 TBD
+
+### Beispiel 1.19
+
+$$a_1=1$$
+$$a_n=2*a_{n-1} +1$$
+
+Es soll gezeigt werden:
+
+$$a_n = 2^n-1$$
+
+Nächste Zahl:
+
+$$2^{n+1} -1 = 2*a_{(n+1)-1} +1$$
+
+$$2^{n+1} -1 = 2*a_{n} +1$$
+
+$$2^{n+1} -1 = 2*(2^n-1) +1$$
+
+$$2^{n+1} -1 = 2*2^n-2 +1$$
+
+$$2^{n+1} -1 = 2^{n+1} -1$$
+
+QED.
 
 ### Beispiel 1.20
 
 Für alle $n\in\mathbb{N}$ gilt:
 
 $$2^n > n$$
+
+Kein Plan
 
 ## Nächstes Mal
 
