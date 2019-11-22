@@ -3,7 +3,7 @@
 #include <signal.h>
 
 void inputChar(char *var) {
-  scanf("%c", var);
+  scanf("%s", var);
   fflush(stdin);
 }
 
