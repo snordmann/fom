@@ -209,7 +209,6 @@ REWE
 
 Im Skript viele Folien dafür, damit verschiedene Leute es anders lernen können
 
-
 Beispielaufgabe S.87
 
 - Auszahlung *Fi-Li Re*
