@@ -7,6 +7,7 @@ Vorlesung vom *2019-12-14*.
 - Wichtig ist, Vorgehensmodelle und Vorgehensweisen zu unterscheiden
 - Was ist der Unterschied zwischen Explorativem, experimentellen und
   evolutionärem/inkrementellen Prototyping?
+  - <https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)#Arten>
 - Vervollständigen Sie die Vor- und Nachteile aller Modelle
   (Sequenziell, Wasserfall, Spiral, V, und alle, die noch kommen)
 - Hausaufgabe: Rollen und Prozesse im Scrum durchlesen
