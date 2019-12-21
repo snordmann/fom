@@ -7,5 +7,8 @@ COPY ${SRC_DIR} .
 RUN gcc -Werror-implicit-function-declaration -o /app ${GCC_EXTRA_ARGS} $(ls *.c)
 
 FROM alpine
-COPY --from=builder /app /app
-CMD ["/app"]
+WORKDIR /app
+RUN apk add gdb
+COPY --from=builder /app ./bin
+COPY --from=builder /usr/src/app .
+CMD ["./bin"]
