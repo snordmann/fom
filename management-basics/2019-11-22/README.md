@@ -228,7 +228,7 @@ ansetzen darf)
       EBITA
     ```
 
-- Earnings Before Interests, Taxes, Depreciation Amortization
+- Earnings Before Interests, Taxes, Depreciation and Amortization
   - Jahresüberschuss vor Steuern und Zinsen
 
   - ```text
