@@ -28,11 +28,101 @@ Dieser Abschnitt enthält alle Formeln zu auswenig lernen. Viel Spaß 🤮
 
 ### Cash Flow
 
-TBD
+```text
+  Jahresüberschuss (NACH-STEUER-GRÖßE)
++ Abschreibungen
+- Zuschreibungen
++ Delta zum Vorjahr der langfr. Rückstellungen (in Betriebsergebnis)
+----------
+  Netto Cash Flow (weil JÜ nach Steuer ist)
+
+  Netto Cash Flow
++ Steuern
+----------
+  Brutto Cash Flow (weil mit Steuer verrechnet)
+
+  Netto Cash Flow
++ außergewöhnliche Aufwände
+- außergewöhnliche Erträge
+----------
+  Operating Cash Flow
+
+  Operating Cash Flow
+- Ersatzinvestitionen (zukünftig geplant)
+- Erweiterungsinvestitionen (zukünftig geplant)
++ Delta Working Capital (Arbeitendes Kapital)
+----------
+  Free Cash Flow
+```
 
 ### EBITDA
 
-TBD
+```text
+E = Earnings
+B = Before
+I = Interests
+T = Taxes
+D = Depreciation (="klassische" Abschreibungen)
+A = Amortization (=Abschreibungen auf Vermögensgegenstände, die im internationalem
+Rechnungswesen angesetzt werden dürfen)
+```
+
+- Earning Before Taxes
+  - Jahresüberschuss vor Steuern
+
+  - ```text
+      Jahresüberschuss
+    + Steuern von Einkommen und Ertrag
+    ------------
+      EBT
+    ```
+
+- Earnings Before Interests and Taxes
+  - Jahresüberschuss vor Steuern und Zinsen
+
+  - ```text
+      EBT
+    + Zinsaufwendugnen
+    + Zinserträge
+    ------------
+      EBIT = Ergebnis der gewöhnlichen Geschäftstätigkeit
+    ```
+
+- Earnings Before Interests, Taxes and Amortization
+  - Jahresüberschuss vor Steuern und Zinsen
+
+  - ```text
+      EBIT
+    + Abschreibungen aus immaterialle Vermögensgegenstände, insbesondere Geschäfts- oder Firmenwert (nicht in dtl.)
+    ------------
+      EBITA
+    ```
+
+- Earnings Before Interests, Taxes, Depreciation and Amortization
+  - Jahresüberschuss vor Steuern und Zinsen
+
+  - ```text
+      EBITA
+    + Abschreibungen auf Sachanlagevermögen
+    ------------
+      EBITDA
+    ```
+
+- EBIT is gängige Größe um Perfocmance eines Unternehmens zu bewerten
+- Warum gibt es mehr als EBT?
+  - EBT wird genutzt, um steuersystemunabhängige Vergleiche anzustellen
+  - EBIT wird genutzt, um finanzstrukturunabhängige Vergleiche anzustellen
+    - In den USA ist es normal, dass Privatpersonen am EK an Unternehmen teilhaben.
+    - FK hat Steuervorteil gegenüber EK
+    - Europäische Unternehmen haben Steuervorteil gegenüber USA, weil diese höhere FK zu EK haben
+  - EBITA wird genutzt, um rechnungslegungssystemunabhängige Vergleiche anzustellen
+    - USA erlauben immaterielle Abschreibungen
+    - Deutschland nicht
+    - Muss neutralisiert werden, damit vergleichbar ist
+  - EBITDA wird genutzt, um branchenübergreifende Vergleiche anzustellen
+    - Lufthansa hat riesige Abschreibungen, weil Flugzeuge teuer sind
+    - FOM hat geringere Abschreibungen, weil Rechner und Gebäude nicht so teuer sind (im Vergleich)
+    - ==> Ist ein eher theoretisches Konzept
 
 ### Rentabilitäten
 
