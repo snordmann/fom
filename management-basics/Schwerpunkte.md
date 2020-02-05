@@ -12,7 +12,7 @@
 
 ## Rechnungsteil
 
-Dieser Abschnitt enthält alle Formeln zu auswenig lernen. Viel Spaß 🤮
+Dieser Abschnitt enthält alle Formeln zu auswenig lernen. Viel Spaß
 
 ### Grundlagen Rechnungswesen
 
@@ -167,7 +167,9 @@ ist davon abhängig, wie viel Geld wir durch andere Investitionen erwarten würd
 
 #### Kapitalwertmethode
 
-![](2020-02-04-19-58-07.png)
+$$
+Kapitalwert = -Anschaffungswert + \sum_{n}^{t=1}\frac{ENZÜ_t}{(1+i)^t}
+$$
 
 ### Finanzierung
 
