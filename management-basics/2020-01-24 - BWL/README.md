@@ -72,7 +72,7 @@ Laufzeit = 6 Jahre
 
 Kapitaldienst = $100000000\cdot \frac{0.06\cdot 1.06^6}{1.06^6-1} \approx 20336000$
 
-| Jahr | Ausstehender Betrag JA | Kapitaldienst | Zinsanteil = i*JA | Tilgungsanteil = KD - ZA | Ausstehender Betrag JE = JA-ZA |
+| Jahr | Ausstehender Betrag JA | Kapitaldienst | Zinsanteil = i*JA | Tilgungsanteil = KD - ZA | Ausstehender Betrag JE = JA-TA |
 | ---: | ---------------------: | ------------: | ----------------: | -----------------------: | -----------------------------: |
 |    1 |              `100.000` |      `20.336` |           `6.000` |                 `14.336` |                       `85.664` |
 |    2 |               `85.664` |      `20.336` |           `5.140` |                 `15.196` |                       `70.468` |
