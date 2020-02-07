@@ -251,7 +251,7 @@ Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 / 7 = 5
       - Bilanzsumme erhöht sich nicht
       - Man kann weniger EK vorhalten (bessere Kennzahlen)
   - Nachteile
-- Factoring
+- Factoring (unwichtig!)
   - Verkauf von Forderungen
   - Vorteile für das Unternehmen
     - Geld kommt sofort (höhere Liquidität)
@@ -264,3 +264,27 @@ Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 / 7 = 5
   - Nachteile
     - Bindung an das Factoringunternehmen
     - Wirtschaftliche Schwäche wird gezeigt
+
+## Hausaufgabe "Kapitalerhöhung Konkurs AG"
+
+### Aufgabenteil a
+
+> Welche Bestimmungsfaktoren hat die Unternehmensleitung der Konkurs-AG  bei der
+> Festlegung der Höhe des Bezugskurses der jungen Aktien zu beachten?
+
+Kein Plan
+
+### Aufgabenteil b
+
+> Angenommen, die neuen Aktien käönnten zu einem Kurs von 125€ untergebracht
+> werden. Wie lautet des Bezugsverhältnis?
+
+150 000 000 € Kapitalerhöhung
+
+Zu einem Kurs von 125€ ausgeben
+
+150 000 000 € / 125€ = 1 200 000 Anteile
+
+Anzahl alter Aktien = Gez. Kapital / Nennwert = 300 000 000 / 50 = 6 000 000
+
+Anzahl Alte Aktien / Anzahl Neue Aktien = 6 000 000 / 1 200 000 = 5
