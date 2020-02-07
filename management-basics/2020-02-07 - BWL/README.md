@@ -10,7 +10,7 @@ Vorlesung vom *2020-02-07*
     - Zweiter Teil: offene (Verständnis-)Fragen
 - Klausur
   - BWL und VWL aufteilen (neue Zettel nehmen und die jeweiligen Dozenten eintragen)
-- Sturkturierung der EK einer AG  
+- Strukturierung der EK einer AG  
   - Genutzt für Kapitalerhöhungen
   - Nennwert der Anteile wird in das gezeichnete Kapital eingetragen
   - Differenz zwischen Ausgabekurs und Nennwert (AGIO) in die Kapitalrücklagen
@@ -73,6 +73,8 @@ Eintrittswahrscheinlichkeit
 |_______\________Schadenshöhe
 ```
 
+Wenn Risikofaktoren oberhalb der Line sind, sollte eine Strategie dafür gebildet werden.
+
 ### Kennzahlen
 
 - Break Even Point (nächstes Semester)
@@ -101,6 +103,11 @@ Eintrittswahrscheinlichkeit
     - Viele wertvolle Investitionen finden im Anlagevermögen statt (citation needed)
     - Anlagevermögen gering zu halten wird gemacht, um Kennzahl zu verbessern
     - kurzfristige Interessen (Kennzahlen) != langfristige Interessen (Verbesserungen)
+
+##### ROI - Was passiert wenn am ROI-Modell
+
+Als Hausaufgabe verschiedene Szenarien am ROI-Schema durchspielen (Beispiel:
+Marketing, Factoring, ....)
 
 #### Balanced Scorecard
 
@@ -146,12 +153,7 @@ möglichst hoch und Risiko möglichst gering ist.
 Geringere Innenfinanzierungskraft, weil alles, was für Kapitaldienst ausgegeben
 wird, nicht für Innovationen zur Verfügung steht
 
-### ROI - Was passiert wenn am ROI-Modell
-
-Als Hausaufgabe verschiedene Szenarien am ROI-Schema durchspielen (Beispiel:
-Marketing, Factoring, ....)
-
-### Übung Leverage Effekt
+##### Übung Leverage Effekt
 
 Wenn rGK > i:
 
@@ -191,7 +193,7 @@ erhöhen möchte.
     - Später können nur noch Symptome behandelt werden
     - Abbildung kann sinngemäß in der Klausur abgefragt werden
 
-#### Messabrkeit von Krisen
+#### Messbarkeit von Krisen
 
 - Häufigste Probleme: Endogene Ursachen
   - Fehlerhaftes management
@@ -203,7 +205,7 @@ erhöhen möchte.
 - Operative Restrukturierung
 - Strategische Restrukturierung
 
-Bei Ergebnis und Liquiditätskrise analysiert man folgendes:
+Bei Ergebnis- und Liquiditätskrise analysiert man folgendes:
 
 - Vermögenslage
   - Anlagendeckungsgrade und Goldene Bilanzregel

@@ -272,19 +272,19 @@ Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 / 7 = 5
 > Welche Bestimmungsfaktoren hat die Unternehmensleitung der Konkurs-AG  bei der
 > Festlegung der Höhe des Bezugskurses der jungen Aktien zu beachten?
 
-Kein Plan
+Ertragswert, Discounted Cash Flow, ...?
 
 ### Aufgabenteil b
 
-> Angenommen, die neuen Aktien käönnten zu einem Kurs von 125€ untergebracht
+> Angenommen, die neuen Aktien könnten zu einem Kurs von 125€ untergebracht
 > werden. Wie lautet des Bezugsverhältnis?
 
 150 000 000 € Kapitalerhöhung
 
 Zu einem Kurs von 125€ ausgeben
 
-150 000 000 € / 125€ = 1 200 000 Anteile
+Anzahl neue Aktien = Kapitalerhöhung / Ausgabewert = 150 000 000 € / 125€ = 1 200 000
 
 Anzahl alter Aktien = Gez. Kapital / Nennwert = 300 000 000 / 50 = 6 000 000
 
-Anzahl Alte Aktien / Anzahl Neue Aktien = 6 000 000 / 1 200 000 = 5
+Bezugsverhältnis = Anzahl Alte Aktien / Anzahl Neue Aktien = 6 000 000 / 1 200 000 = 5
