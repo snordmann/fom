@@ -5,7 +5,8 @@ Vorlesung vom *2020-02-01*
 ## Wiederholung und Grundsätzliches
 
 - Klausur
-  - Auf den Arbeitsblättern muss aufgeschrieben werden, für welche Klausur es ist
+  - Auf den Arbeitsblättern muss aufgeschrieben werden, für welche Klausur es
+    ist
     - Es ist aber die selbse Aufgabenstellungsnummer
   - Aufteilung BWL:VWL = ca. 75:15 (kann sich leicht verschieben)
   - Es dürfen keine Antworten auf dem Klausurblatt geschrieben
@@ -18,7 +19,8 @@ Vorlesung vom *2020-02-01*
   - Annuität
     - Jährlicher Festbetrag zur Begleichung der Schuld und Zinsen
     - Aus Zinsanteil und Tilgunsanteil bestehend
-      - Im Laufe der Zeit wird Tilgungsanteil größer (und der Zinsanteil geringer)
+      - Im Laufe der Zeit wird Tilgungsanteil größer (und der Zinsanteil
+        geringer)
     - Kapitaldienst: Anleihenswert \* (i \* (1+i)^n)/((1+i)^n - 1)
   - Mezzanine
     - EK als FK oder FK als EK aussehen lassen
@@ -45,10 +47,12 @@ Vorlesung vom *2020-02-01*
     - Wert der jemand bereit ist, für eine Aktie auszugeben
   - Briefkurs = Verkaufskurs
     - Wert der jemand bereit ist, für eine Aktie abzugeben
-  - Wenn Briefkurs und Geldkurs gleich groß ist, kommt eine Transaktion zu stande
+  - Wenn Briefkurs und Geldkurs gleich groß ist, kommt eine Transaktion zu
+    stande
   - Wie partizipiert das Unternehmen an dieser Transaktion?
     - Keine Provision
-    - Sobald die Aktie einmal auf dem Markt ist, macht man kein Geschäft mehr damit
+    - Sobald die Aktie einmal auf dem Markt ist, macht man kein Geschäft mehr
+      damit
   - Im Beispiel die höchsten Umsätze bei einem Kurs von 101, weil 170 Aktien
     verkauft werden können
     - Es werden alle Kaufaufträge and Verkaufsaufträger erfasst und der, der die
@@ -67,7 +71,8 @@ Vorlesung vom *2020-02-01*
   - bei Unternehmensbeteiligungen
     - bis zu 3 Jahre ist es sinnvoll eine Beteiligung zu halten
     - Es ist über 3 Jahr einfacher konkrete Zahlen zu erfassen
-    - Bis drei Jahre = genaue Zahlen / unterschiedliche Nettoeinzahlungen (=Gewinne/JÜ)
+    - Bis drei Jahre = genaue Zahlen / unterschiedliche Nettoeinzahlungen
+      (=Gewinne/JÜ)
       - Begrenzte Lebensdauer
     - Bis 10 Jahre = durchschnittliche Größe / gleiche Nettoeinzahlungen
       - Begrenzte Lebensdauer
@@ -91,7 +96,8 @@ Nach Paragraph 266 HGB
   - Kapitalrücklage
   - Gewinnrücklagen
     - gesetlziche Rücklagen
-    - Rücklagen für Anteile an einem herrschendem oder mehrheitlich beteiligtem Unternehmen
+    - Rücklagen für Anteile an einem herrschendem oder mehrheitlich beteiligtem
+      Unternehmen
     - satzungsmäßfige Rücklagen
     - andere gewinnrücklagen
   - Gewinnvortrag / Verlustvortrag (Bilanzgewinn)
@@ -121,7 +127,8 @@ Ausgabepreis - Nennwert = AGIO
 
 Häufig mögliche, dass Aktie mit Nennwert von 50€ einen Ausgabepreis von 90€ hat
 
-Höhe des gezeichneten Kapitals = Nennwert \* Anzahl (Bsp. 50€ \* 10 000 = 500 000€)
+Höhe des gezeichneten Kapitals = Nennwert \* Anzahl (Bsp. 50€ \* 10 000 = 500
+000€)
 
 Kapitalrücklagen = (Ausgabepreis - Nennwert) \* Anzahl (Bsp. (90€ - 50€) \* 10
 000 = 400 000€)
@@ -159,12 +166,9 @@ Gewinn und Verlustvortrag = Gewinn / Verlust des letzten Jahres
 
 Klausurrelevant
 
-altes Grundkapital = 1.2 Mio. €
-neues Grundkapital = 1.4 Mio. €
+altes Grundkapital = 1.2 Mio. € neues Grundkapital = 1.4 Mio. €
 
-Nennwert = 50€
-alter Ausgabepreis = 180€
-neuer Ausgabepreis = 140€
+Nennwert = 50€ alter Ausgabepreis = 180€ neuer Ausgabepreis = 140€
 
 Stellen Sie die vereinfachte Bilant nach der Kapitalerhöhung auf!
 
@@ -186,16 +190,15 @@ Differenz Kapitalrücklage = (140 - 50) * 4000 = 360 000
 
 ### Berechnung Mittelkurs
 
-Alter Kurs 180€
-Neuer Kurs 140€
+Alter Kurs 180€ Neuer Kurs 140€
 
 Nennwert  50€
 
-Anzahl alte Aktien = 1 200 000€ / 50€ = 24 000
-Anzahl neue Aktien =   200 000€ / 50€ =  4 000
+Anzahl alte Aktien = 1 200 000€ / 50€ = 24 000 Anzahl neue Aktien =   200 000€ /
+50€ =  4 000
 
-Durchschnittlicher Kurs = (180€ \* 24 000 + 140€ \* 4 000) / 28 000 = 4 880 000€ / 28
-000 = 174.29 €
+Durchschnittlicher Kurs = (180€ \* 24 000 + 140€ \* 4 000) / 28 000 = 4 880 000€
+/ 28 000 = 174.29 €
 
 Generelle Formel:
 
@@ -228,14 +231,15 @@ Bezugsverhältnis = Anzahl alte Aktien / Anzahl neue Aktien = 24000 / 4000 = 6
 
 #### c
 
-Mittelkurs = (Anzahl alte Aktien \* alter Aktienwert + Anzahl neue Aktien \* neuer
-Aktienwert) / Gesamtnzahl der Aktien = (24 000 \* 180€ + 4 000 \* 140€) / 28 000
-= 4 880 000 € / 28 000 = 174.29€
+Mittelkurs = (Anzahl alte Aktien \* alter Aktienwert + Anzahl neue Aktien \*
+neuer Aktienwert) / Gesamtnzahl der Aktien = (24 000 \* 180€ + 4 000 \* 140€) /
+28 000 = 4 880 000 € / 28 000 = 174.29€
 
 #### d
 
-Theoretischer Bezugsrecht = (alter Aktienwert - neuer Aktienwert) / (Anzahl alter
-Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 / 7 = 5.71€
+Theoretischer Bezugsrecht = (alter Aktienwert - neuer Aktienwert) / (Anzahl
+alter Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 /
+7 = 5.71€
 
 ## Sonderformen der Finanzierung
 
@@ -272,7 +276,8 @@ Aktien / Anzahl neue Aktien + 1) = (180 - 140) / (24 000/4 000 + 1) = 40 / 7 = 5
 > Welche Bestimmungsfaktoren hat die Unternehmensleitung der Konkurs-AG  bei der
 > Festlegung der Höhe des Bezugskurses der jungen Aktien zu beachten?
 
-Ertragswert, Discounted Cash Flow, ...?
+Ertragswertkurs, Bilanzkurs, Wert des Discounted Cash Flow, konjunkturelle
+Situation, etc.
 
 ### Aufgabenteil b
 
@@ -283,8 +288,10 @@ Ertragswert, Discounted Cash Flow, ...?
 
 Zu einem Kurs von 125€ ausgeben
 
-Anzahl neue Aktien = Kapitalerhöhung / Ausgabewert = 150 000 000 € / 125€ = 1 200 000
+Anzahl neue Aktien = Kapitalerhöhung / Ausgabewert = 150 000 000 € / 125€ = 1
+200 000
 
 Anzahl alter Aktien = Gez. Kapital / Nennwert = 300 000 000 / 50 = 6 000 000
 
-Bezugsverhältnis = Anzahl Alte Aktien / Anzahl Neue Aktien = 6 000 000 / 1 200 000 = 5
+Bezugsverhältnis = Anzahl Alte Aktien / Anzahl Neue Aktien = 6 000 000 / 1 200
+000 = 5
