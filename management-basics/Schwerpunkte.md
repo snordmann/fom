@@ -253,18 +253,46 @@ erhöhen möchte.
 Relative Porduktivitäten = Opportunitätskosten (Auf was muss ich verzichten,
 wenn ich ein GUt herstelle)
 
+In folgendem Beispiel sind die Zahlen in Tonnen pro Stunde.
+
 |        | Fleisch | Gemüse | Opportunität Fleisch | Opportunität Gemüse |
 | ------ | ------- | ------ | -------------------- | ------------------- |
-| Max    | 6       | 1.5    | 6/1.5 = 4            | 1.5/6 = .25         |
-| Moritz | 2       | 1      | 2 /1 = 2             | 1 / 2 = .5          |
+| Max    | 6       | 1.5    | 1.5/6 = 0.25         | 6/1.5 = 4           |
+| Moritz | 2       | 1      | 1 /2 = 0.5           | 2 / 1 = 2           |
+
+Max hat komparativen Vorteil bei der Fleisch-Herstellung. Moritz hat
+komparativen Vorteil bei Gemüse.
 
 #### Preiselastizität
 
 ![](2020-02-04-20-11-26.png)
 
-#### Kreuzpreiselastizität
+Wenn Wert < -1 reagiert Nachfrage elastisch (Menge ist variabel und Preis bleibt
+gleich)
+
+Wenn Wert = -1 reagiert Nachfrage proportional elastisch (isoelastisch)
+
+Wenn Wert zwischen 0 und -1 reagiert Nachfrage unelastisch (Preis ist variabel
+und Menge bleibt gleich)
+
+Wenn Wert > 1 reagiert Angebot elastisch (Menge ist variabel und Preis bleibt gleich)
+
+Wenn Wert = 1 reagiert Angebot proportional elastisch (isoelastisch)
+
+Wenn Wert zwischen 0 und 1 reagiert Angebot unelastisch (Preis ist variabel und
+Menge bleibt gleich)
+
+y-Achse, Ordinate, Vertikal, Unelastisch (Alles später im Alphabet)
+
+x-Achse, Abzisse, Horizontal, Elastisch (Alles früher im Alphabet)
+
+#### Kreuzpreiselastizität (nur bei Nachfrage)
 
 ![](2020-02-04-20-11-49.png)
+
+#### Konsumenten- und Produzentenrente
+
+Summe aus Konsumentenrente und Produzentenrente beschreibt den sozialen Überschuss
 
 #### Volkswirtschaftliche Gesamtrechnung
 
@@ -273,6 +301,9 @@ wenn ich ein GUt herstelle)
 ##### Entstehungsrechnung
 
 ![](2020-02-04-20-12-55.png)
+
+Tabelle muss nicht auswendigt gelernt werden. Wenn es abgefragt wird, wird auch die
+Tabelle gegeben.
 
 ##### Verwendungsrechnung
 
@@ -297,8 +328,48 @@ Exportquote = X / Y
 Importquote = Im / Y
 Nettoexportquote = NX / Y
 Konsumquote = C / Y
+
+Lohnquote = Lohneinkommen / Volkseinkommen
+Gewinnquote = Gewinne / Volkseinkommen
+
+Sparquote = Sparvolumen / Verfügbares Einkommen
+
+Verfügbares Einkommen in diesem Kontaxt:
+  Volkseinkommen
+- Steuern
+- Sozialabgaben
++ Transfers
 ```
+
+#### Nominales und reales BIP
+
+Nominal = So wie es ist (mit Inflation)
+
+Real = Mit Inflationsausgleich (es werden gleiche Preise für die Güter
+angenommen)
+
+Nominal:
+
+| Jahr | Preis | Menge | nominales BIP |
+| ---- | ----- | ----- | ------------- |
+| 2016 | 1     | 100   | 100           |
+| 2017 | 2     | 150   | 300           |
+| 2018 | 3     | 100   | 300           |
+
+Real:
+
+| Jahr | Preis | Menge | reales BIP |
+| ---- | ----- | ----- | ---------- |
+| 2016 | 1     | 100   | 100        |
+| 2017 | 1     | 150   | 150        |
+| 2018 | 1     | 100   | 100        |
 
 #### BIP Deflator
 
 ![](2020-02-04-20-13-23.png)
+
+| Jahr | nominales BIP | reales BIP | BIP Deflator |
+| ---- | ------------- | ---------- | ------------ |
+| 2016 | 100           | 100        | 100%         |
+| 2017 | 300           | 150        | 200%         |
+| 2018 | 300           | 100        | 300%         |
