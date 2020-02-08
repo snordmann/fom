@@ -225,6 +225,27 @@ $$Risiko = Eintrittswahrscheinlichkeit\cdot Kosten\ bei\ Eintritt$$
 
 ![](2020-02-04-20-09-16.png)
 
+Wenn rGK > i:
+
+|   EK |   FK |      V |    x |  rGK |    i | i*FK | x-(i*FK) |    rEK |
+| ---: | ---: | -----: | ---: | ---: | ---: | ---: | -------: | -----: |
+| 1000 |    0 |     0% |  100 |  10% |   8% |    0 |      100 |    10% |
+|  600 |  400 | 67.78% |  100 |  10% |   8% |   32 |       68 | 11.33% |
+|  400 |  600 |   150% |  100 |  10% |   8% |   48 |       52 |    13% |
+|   90 |  910 | 10.11% |  100 |  10% |   8% | 72.8 |     27.2 | 30.22% |
+
+Wenn rGK < i:
+
+|   EK |   FK |      V |    x |  rGK |    i |  i*FK | x-(i*FK) |     rEK |
+| ---: | ---: | -----: | ---: | ---: | ---: | ----: | -------: | ------: |
+| 1000 |    0 |     0% |  100 |  10% |  12% |     0 |      100 |     10% |
+|  600 |  400 | 67.78% |  100 |  10% |  12% |    48 |       32 |   5.33% |
+|  400 |  600 |   150% |  100 |  10% |  12% |    72 |       28 |      7% |
+|   90 |  910 | 10.11% |  100 |  10% |  12% | 109.2 |     -9.2 | -10.22% |
+
+Klausur: In der MC Teil wird abgefragt, ob rGK > i richtig ist, wenn man rEK
+erhöhen möchte.
+
 ### VWL
 
 #### Preiselastizität
@@ -237,6 +258,8 @@ $$Risiko = Eintrittswahrscheinlichkeit\cdot Kosten\ bei\ Eintritt$$
 
 #### Volkswirtschaftliche Gesamtrechnung
 
+![](2020-02-08-08-33-17.png)
+
 ##### Entstehungsrechnung
 
 ![](2020-02-04-20-12-55.png)
@@ -245,14 +268,26 @@ $$Risiko = Eintrittswahrscheinlichkeit\cdot Kosten\ bei\ Eintritt$$
 
 BIP(Y) = Konsum(C) + Staatskonsum(G) + Investitionen(I) + Nettoexporte(NX)
 
+##### Verteilungsrechnung
+
+```text
+  Arbeitsnehmerentgeld
++ Unternehmens- & Vermögenseinkommen
++ Produktions- und Importabgaben
++ Abschreibungen
+- Saldo der Primäreinkommen aus der übrigen Welt
+```
+
 #### Verschiedene Quoten
 
+```text
 Staatsquote = G / Y
 Investitionsquote = I / Y
 Exportquote = X / Y
 Importquote = Im / Y
 Nettoexportquote = NX / Y
 Konsumquote = C / Y
+```
 
 #### BIP Deflator
 
