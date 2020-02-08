@@ -248,6 +248,16 @@ erhöhen möchte.
 
 ### VWL
 
+#### Komparativer Kostenvorteil
+
+Relative Porduktivitäten = Opportunitätskosten (Auf was muss ich verzichten,
+wenn ich ein GUt herstelle)
+
+|        | Fleisch | Gemüse | Opportunität Fleisch | Opportunität Gemüse |
+| ------ | ------- | ------ | -------------------- | ------------------- |
+| Max    | 6       | 1.5    | 6/1.5 = 4            | 1.5/6 = .25         |
+| Moritz | 2       | 1      | 2 /1 = 2             | 1 / 2 = .5          |
+
 #### Preiselastizität
 
 ![](2020-02-04-20-11-26.png)
