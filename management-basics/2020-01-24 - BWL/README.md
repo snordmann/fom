@@ -63,7 +63,7 @@ Für uns relevant: Fester Zinssatz in mehreren Beträgen zahlen
 
 ### Rechnung
 
-Annullität = jährlicher Rückzahlungsbetrag, der sich nicht ändert
+Annuität = jährlicher Rückzahlungsbetrag, der sich nicht ändert
 
 Anleihe über 100 Mio wird zu einem Kurs von 97% emmitiert, weil
 Bearbeitungskosten und Risikomanagement

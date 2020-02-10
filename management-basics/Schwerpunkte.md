@@ -1,6 +1,7 @@
 # Schwerpunkte zum Lernen - Teil BWL
 
 - Multiple Choice Teil (richtig/falsch)
+  - 20 von 75 Punkten
   - Marketing
 - Rechnungsteil
   - Alle Kennzahlen
@@ -8,7 +9,9 @@
     - Rentabilität
     - Annuität
     - Cash Flow
-    - Ertragswerte
+    - Ertragswerte (=Substanzwerte)
+
+- Hausaufgabe: Übungsklausur 3 (mit Ertragswertkurs)
 
 ## Rechnungsteil
 
@@ -53,6 +56,13 @@ Dieser Abschnitt enthält alle Formeln zu auswenig lernen. Viel Spaß
 + Delta Working Capital (Arbeitendes Kapital)
 ----------
   Free Cash Flow
+
+
+  Umlaufvermögen
+- Kurzfristige Verbindlichkeiten
+----------
+  Working Capital
+
 ```
 
 ### EBITDA
