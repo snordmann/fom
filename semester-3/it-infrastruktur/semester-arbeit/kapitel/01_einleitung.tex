@@ -1,18 +1,62 @@
 \newpage
 \section{Einleitung} \label{Einleitung}
 Ein wichtiger Erfolgfaktor für Unternehmen ist es aktuelle Trends zu erkennen
-und ihre Strategie entsprechend anzupassen. In dieser Arbeit werden aktuelle
-Trends in der IT vorgestellt und bewertet.
+und ihre Strategie entsprechend anzupassen. 
 
 
 \subsection{Forschungsfrage}
-Welche IT Trends bestehen aktuell und wie wichtig ist es, diese in der
-Unternehmensstrategie aufzunehmen?
+Wie können Unternehmen Hypes von erfolgsversprechenden Trends - vor allem im
+Bereich der IT-Infrastruktur - unterscheiden?
 
 \subsection{Aufbau der Arbeit}
 
-Zuletzt werden die Ergebnisse dieser Semesterarbeit im Kapitel \ref{fazit} zusammengefasst.
+Im Kapitel \ref{infrastruktur} wird dargestellt, welche IT Komponenten und
+Systeme in der IT-Infrastruktur vorhanden sind. Hier wird ein besonderer Fokus
+auf Cloud Technologien gelegt.
 
-\subsection{Umfang der Arbeit}
+Im Kapitel \ref{methodik} wird eine Möglichkeit vorgestellt, wie man
+IT-Infrastruktur-Trends bewerten kann.
 
-TODO
+Im Kapitel \ref{hybrid_cloud} wird dieses Verfahren auf Trends im Hybrid
+Cloud Umfeld angewandt, um einen Hype zu erkennen und einen etablierten Trend
+darzustellen.
+
+Zuletzt werden die Ergebnisse dieser Semesterarbeit im Kapitel \ref{fazit}
+zusammengefasst.
+
+\subsection{Unterschied zwischen Trend und Hype}
+
+In dieser Arbeit wird zwischen Trend und Hype unterschieden. Ein Trend
+bezeichnet eine neue Technologie oder Arbeitsweise, die vielen Unternehmen einen
+Wettberwerbsvorteil verschaffen - oder notwendig sind, um zumindest keinen
+Wettbewerbsnachteil zu haben.
+
+Ein Hype hingegen ist eine neue Technologie oder Arbeitsweise, die eine kurze
+Zeit sehr viel Aufmerksamkeit durch Unternehmen und Gesellschaft bekommt, aber
+wenig oder keinen Mehrwert für Unternehmen bietet. Der Hype stribt nach kurzer
+Zeit aus (siehe auch Abbildung \ref{fig:trend_vs_hype}).
+
+\begin{figure}[H]
+\caption{Trend vs. Hype}\label{fig:trend_vs_hype}
+\begin{tikzpicture}[xscale=10,yscale=5]
+% Achsen
+\draw[<->] 
+     (1,0)
+  -- (0.5, 0) node[below]{Zeit} 
+  -- (0,0) 
+  -- (0,0.5) node[left]{Erwarteter Erfolg}
+  -- (0,1);
+
+%hype
+\draw[domain=0:0.3778,samples=100] plot (\x,{0.95*2^(-(11.9*(\x-0.3))^2)+0.04});
+\draw[domain=0.3778:1,samples=100,orange] plot (\x,{0.95*2^(-(11.9*(\x-0.3))^2)+0.04});
+\draw (0.6,0.05) node[above]{Hype};
+%trend
+\draw[blue]
+  (0.3778,0.564166) to [out=-82.88,in=-180] (0.58,0.37) to [out=0,in=-150] (1,0.7);
+\draw (0.6,0.5) node[below]{Trend};
+
+\end{tikzpicture}
+\\
+Quelle: Eigene Darstellung basierend auf Gartner Hype-Cycle
+\end{figure}
