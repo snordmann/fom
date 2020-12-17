@@ -1,0 +1,382 @@
+!function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t()
+else if("function"==typeof define&&define.amd)define([],t)
+else{var n=t()
+for(var r in n)("object"==typeof exports?exports:e)[r]=n[r]}}(window,function(){return function(e){var t={}
+function n(r){if(t[r])return t[r].exports
+var i=t[r]={i:r,l:!1,exports:{}}
+return e[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e
+if(4&t&&"object"==typeof e&&e&&e.__esModule)return e
+var r=Object.create(null)
+if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(r,i,function(t){return e[t]}.bind(null,i))
+return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e}
+return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=3)}([function(e,t,n){"use strict";(function(e){Object.defineProperty(t,"__esModule",{value:!0})
+var r,i=n(1),o=((r={})["no-app"]="No Firebase App '{$name}' has been created - call Firebase App.initializeApp()",r["bad-app-name"]="Illegal App name: '{$name}",r["duplicate-app"]="Firebase App named '{$name}' already exists",r["app-deleted"]="Firebase App named '{$name}' already deleted",r["duplicate-service"]="Firebase service named '{$name}' already registered",r["invalid-app-argument"]="firebase.{$name}() takes either no argument or a Firebase App instance.",r),s=new i.ErrorFactory("app","Firebase",o)
+function a(e,t){throw s.create(e,t)}var c="[DEFAULT]",u=[],h=function(){function e(e,t,n){this.firebase_=n,this.isDeleted_=!1,this.services_={},this.name_=t.name,this._automaticDataCollectionEnabled=t.automaticDataCollectionEnabled||!1,this.options_=i.deepCopy(e),this.INTERNAL={getUid:function(){return null},getToken:function(){return Promise.resolve(null)},addAuthTokenListener:function(e){u.push(e),setTimeout(function(){return e(null)},0)},removeAuthTokenListener:function(e){u=u.filter(function(t){return t!==e})}}}return Object.defineProperty(e.prototype,"automaticDataCollectionEnabled",{get:function(){return this.checkDestroyed_(),this._automaticDataCollectionEnabled},set:function(e){this.checkDestroyed_(),this._automaticDataCollectionEnabled=e},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"name",{get:function(){return this.checkDestroyed_(),this.name_},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"options",{get:function(){return this.checkDestroyed_(),this.options_},enumerable:!0,configurable:!0}),e.prototype.delete=function(){var e=this
+return new Promise(function(t){e.checkDestroyed_(),t()}).then(function(){e.firebase_.INTERNAL.removeApp(e.name_)
+var t=[]
+return Object.keys(e.services_).forEach(function(n){Object.keys(e.services_[n]).forEach(function(r){t.push(e.services_[n][r])})}),Promise.all(t.map(function(e){return e.INTERNAL.delete()}))}).then(function(){e.isDeleted_=!0,e.services_={}})},e.prototype._getService=function(e,t){if(void 0===t&&(t=c),this.checkDestroyed_(),this.services_[e]||(this.services_[e]={}),!this.services_[e][t]){var n=t!==c?t:void 0,r=this.firebase_.INTERNAL.factories[e](this,this.extendApp.bind(this),n)
+this.services_[e][t]=r}return this.services_[e][t]},e.prototype.extendApp=function(e){var t=this
+i.deepExtend(this,e),e.INTERNAL&&e.INTERNAL.addAuthTokenListener&&(u.forEach(function(e){t.INTERNAL.addAuthTokenListener(e)}),u=[])},e.prototype.checkDestroyed_=function(){this.isDeleted_&&a("app-deleted",{name:this.name_})},e}()
+h.prototype.name&&h.prototype.options||h.prototype.delete||console.log("dc")
+var f=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)}
+var d=!1
+try{d="[object process]"===Object.prototype.toString.call(e.process)}catch(e){}d&&console.warn('\nWarning: This is a browser-targeted Firebase bundle but it appears it is being\nrun in a Node environment.  If running in a Node environment, make sure you\nare using the bundle specified by the "main" field in package.json.\n\nIf you are using Webpack, you can specify "main" as the first item in\n"resolve.mainFields":\nhttps://webpack.js.org/configuration/resolve/#resolvemainfields\n\nIf using Rollup, use the rollup-plugin-node-resolve plugin and set "module"\nto false and "main" to true:\nhttps://github.com/rollup/rollup-plugin-node-resolve\n')
+var p=function e(){var t={},n={},r={},o={__esModule:!0,initializeApp:function(e,n){if(void 0===n&&(n={}),"object"!=typeof n||null===n){var r=n
+n={name:r}}var i=n
+void 0===i.name&&(i.name=c)
+var s=i.name
+"string"==typeof s&&s||a("bad-app-name",{name:s+""}),f(t,s)&&a("duplicate-app",{name:s})
+var u=new h(e,i,o)
+return t[s]=u,d(u,"create"),u},app:s,apps:null,Promise:Promise,SDK_VERSION:"5.10.0",INTERNAL:{registerService:function(e,t,c,f,d){n[e]&&a("duplicate-service",{name:e}),n[e]=t,f&&(r[e]=f,u().forEach(function(e){f("create",e)}))
+var p=function(t){return void 0===t&&(t=s()),"function"!=typeof t[e]&&a("invalid-app-argument",{name:e}),t[e]()}
+return void 0!==c&&i.deepExtend(p,c),o[e]=p,h.prototype[e]=function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n]
+return this._getService.bind(this,e).apply(this,d?t:[])},p},createFirebaseNamespace:e,extendNamespace:function(e){i.deepExtend(o,e)},createSubscribe:i.createSubscribe,ErrorFactory:i.ErrorFactory,removeApp:function(e){d(t[e],"delete"),delete t[e]},factories:n,useAsService:p,Promise:Promise,deepExtend:i.deepExtend}}
+function s(e){return f(t,e=e||c)||a("no-app",{name:e}),t[e]}function u(){return Object.keys(t).map(function(e){return t[e]})}function d(e,t){Object.keys(n).forEach(function(n){var i=p(e,n)
+null!==i&&r[i]&&r[i](t,e)})}function p(e,t){if("serverAuth"===t)return null
+var n=t
+return e.options,n}return i.patchProperty(o,"default",o),Object.defineProperty(o,"apps",{get:u}),i.patchProperty(s,"App",h),o}()
+t.default=p,t.firebase=p}).call(this,n(2))},function(e,t,n){"use strict"
+Object.defineProperty(t,"__esModule",{value:!0})
+var r={NODE_CLIENT:!1,NODE_ADMIN:!1,SDK_VERSION:"${JSCORE_VERSION}"},i=function(e,t){if(!e)throw o(t)},o=function(e){return new Error("Firebase Database ("+r.SDK_VERSION+") INTERNAL ASSERT FAILED: "+e)},s=function(e){for(var t=[],n=0,r=0;r<e.length;r++){var i=e.charCodeAt(r)
+i<128?t[n++]=i:i<2048?(t[n++]=i>>6|192,t[n++]=63&i|128):55296==(64512&i)&&r+1<e.length&&56320==(64512&e.charCodeAt(r+1))?(i=65536+((1023&i)<<10)+(1023&e.charCodeAt(++r)),t[n++]=i>>18|240,t[n++]=i>>12&63|128,t[n++]=i>>6&63|128,t[n++]=63&i|128):(t[n++]=i>>12|224,t[n++]=i>>6&63|128,t[n++]=63&i|128)}return t},a={byteToCharMap_:null,charToByteMap_:null,byteToCharMapWebSafe_:null,charToByteMapWebSafe_:null,ENCODED_VALS_BASE:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",get ENCODED_VALS(){return this.ENCODED_VALS_BASE+"+/="},get ENCODED_VALS_WEBSAFE(){return this.ENCODED_VALS_BASE+"-_."},HAS_NATIVE_SUPPORT:"function"==typeof atob,encodeByteArray:function(e,t){if(!Array.isArray(e))throw Error("encodeByteArray takes an array as a parameter")
+this.init_()
+for(var n=t?this.byteToCharMapWebSafe_:this.byteToCharMap_,r=[],i=0;i<e.length;i+=3){var o=e[i],s=i+1<e.length,a=s?e[i+1]:0,c=i+2<e.length,u=c?e[i+2]:0,h=o>>2,f=(3&o)<<4|a>>4,d=(15&a)<<2|u>>6,p=63&u
+c||(p=64,s||(d=64)),r.push(n[h],n[f],n[d],n[p])}return r.join("")},encodeString:function(e,t){return this.HAS_NATIVE_SUPPORT&&!t?btoa(e):this.encodeByteArray(s(e),t)},decodeString:function(e,t){return this.HAS_NATIVE_SUPPORT&&!t?atob(e):function(e){for(var t=[],n=0,r=0;n<e.length;){var i=e[n++]
+if(i<128)t[r++]=String.fromCharCode(i)
+else if(i>191&&i<224){var o=e[n++]
+t[r++]=String.fromCharCode((31&i)<<6|63&o)}else if(i>239&&i<365){var s=((7&i)<<18|(63&(o=e[n++]))<<12|(63&(a=e[n++]))<<6|63&e[n++])-65536
+t[r++]=String.fromCharCode(55296+(s>>10)),t[r++]=String.fromCharCode(56320+(1023&s))}else{o=e[n++]
+var a=e[n++]
+t[r++]=String.fromCharCode((15&i)<<12|(63&o)<<6|63&a)}}return t.join("")}(this.decodeStringToByteArray(e,t))},decodeStringToByteArray:function(e,t){this.init_()
+for(var n=t?this.charToByteMapWebSafe_:this.charToByteMap_,r=[],i=0;i<e.length;){var o=n[e.charAt(i++)],s=i<e.length?n[e.charAt(i)]:0,a=++i<e.length?n[e.charAt(i)]:64,c=++i<e.length?n[e.charAt(i)]:64
+if(++i,null==o||null==s||null==a||null==c)throw Error()
+var u=o<<2|s>>4
+if(r.push(u),64!=a){var h=s<<4&240|a>>2
+if(r.push(h),64!=c){var f=a<<6&192|c
+r.push(f)}}}return r},init_:function(){if(!this.byteToCharMap_){this.byteToCharMap_={},this.charToByteMap_={},this.byteToCharMapWebSafe_={},this.charToByteMapWebSafe_={}
+for(var e=0;e<this.ENCODED_VALS.length;e++)this.byteToCharMap_[e]=this.ENCODED_VALS.charAt(e),this.charToByteMap_[this.byteToCharMap_[e]]=e,this.byteToCharMapWebSafe_[e]=this.ENCODED_VALS_WEBSAFE.charAt(e),this.charToByteMapWebSafe_[this.byteToCharMapWebSafe_[e]]=e,e>=this.ENCODED_VALS_BASE.length&&(this.charToByteMap_[this.ENCODED_VALS_WEBSAFE.charAt(e)]=e,this.charToByteMapWebSafe_[this.ENCODED_VALS.charAt(e)]=e)}}},c=function(e){try{return a.decodeString(e,!0)}catch(e){console.error("base64Decode failed: ",e)}return null}
+function u(e,t){if(!(t instanceof Object))return t
+switch(t.constructor){case Date:return new Date(t.getTime())
+case Object:void 0===e&&(e={})
+break
+case Array:e=[]
+break
+default:return t}for(var n in t)t.hasOwnProperty(n)&&(e[n]=u(e[n],t[n]))
+return e}var h=function(){function e(){var e=this
+this.promise=new Promise(function(t,n){e.resolve=t,e.reject=n})}return e.prototype.wrapCallback=function(e){var t=this
+return function(n,r){n?t.reject(n):t.resolve(r),"function"==typeof e&&(t.promise.catch(function(){}),1===e.length?e(n):e(n,r))}},e}(),f=function(){return"undefined"!=typeof navigator&&"string"==typeof navigator.userAgent?navigator.userAgent:""},d="FirebaseError",p=Error.captureStackTrace
+var l=function(){return function(e,t){if(this.code=e,this.message=t,p)p(this,b.prototype.create)
+else try{throw Error.apply(this,arguments)}catch(e){this.name=d,Object.defineProperty(this,"stack",{get:function(){return e.stack}})}}}()
+l.prototype=Object.create(Error.prototype),l.prototype.constructor=l,l.prototype.name=d
+var b=function(){function e(e,t,n){this.service=e,this.serviceName=t,this.errors=n,this.pattern=/\{\$([^}]+)}/g}return e.prototype.create=function(e,t){void 0===t&&(t={})
+var n,r=this.errors[e],i=this.service+"/"+e
+n=void 0===r?"Error":r.replace(this.pattern,function(e,n){var r=t[n]
+return void 0!==r?r.toString():"<"+n+"?>"}),n=this.serviceName+": "+n+" ("+i+")."
+var o=new l(i,n)
+for(var s in t)t.hasOwnProperty(s)&&"_"!==s.slice(-1)&&(o[s]=t[s])
+return o},e}()
+function g(e){return JSON.parse(e)}var v=function(e){var t={},n={},r={},i=""
+try{var o=e.split(".")
+t=g(c(o[0])||""),n=g(c(o[1])||""),i=o[2],r=n.d||{},delete n.d}catch(e){}return{header:t,claims:n,data:r,signature:i}},m=function(e,t){for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t(n,e[n])},y=function(e,t){return m(t,function(t,n){e[t]=n}),e},w=function(e,t,n){for(var r in e)if(t.call(n,e[r],r,e))return r},k=function(){function e(){this.chain_=[],this.buf_=[],this.W_=[],this.pad_=[],this.inbuf_=0,this.total_=0,this.blockSize=64,this.pad_[0]=128
+for(var e=1;e<this.blockSize;++e)this.pad_[e]=0
+this.reset()}return e.prototype.reset=function(){this.chain_[0]=1732584193,this.chain_[1]=4023233417,this.chain_[2]=2562383102,this.chain_[3]=271733878,this.chain_[4]=3285377520,this.inbuf_=0,this.total_=0},e.prototype.compress_=function(e,t){t||(t=0)
+var n=this.W_
+if("string"==typeof e)for(var r=0;r<16;r++)n[r]=e.charCodeAt(t)<<24|e.charCodeAt(t+1)<<16|e.charCodeAt(t+2)<<8|e.charCodeAt(t+3),t+=4
+else for(r=0;r<16;r++)n[r]=e[t]<<24|e[t+1]<<16|e[t+2]<<8|e[t+3],t+=4
+for(r=16;r<80;r++){var i=n[r-3]^n[r-8]^n[r-14]^n[r-16]
+n[r]=4294967295&(i<<1|i>>>31)}var o,s,a=this.chain_[0],c=this.chain_[1],u=this.chain_[2],h=this.chain_[3],f=this.chain_[4]
+for(r=0;r<80;r++){r<40?r<20?(o=h^c&(u^h),s=1518500249):(o=c^u^h,s=1859775393):r<60?(o=c&u|h&(c|u),s=2400959708):(o=c^u^h,s=3395469782)
+i=(a<<5|a>>>27)+o+f+s+n[r]&4294967295
+f=h,h=u,u=4294967295&(c<<30|c>>>2),c=a,a=i}this.chain_[0]=this.chain_[0]+a&4294967295,this.chain_[1]=this.chain_[1]+c&4294967295,this.chain_[2]=this.chain_[2]+u&4294967295,this.chain_[3]=this.chain_[3]+h&4294967295,this.chain_[4]=this.chain_[4]+f&4294967295},e.prototype.update=function(e,t){if(null!=e){void 0===t&&(t=e.length)
+for(var n=t-this.blockSize,r=0,i=this.buf_,o=this.inbuf_;r<t;){if(0==o)for(;r<=n;)this.compress_(e,r),r+=this.blockSize
+if("string"==typeof e){for(;r<t;)if(i[o]=e.charCodeAt(r),++r,++o==this.blockSize){this.compress_(i),o=0
+break}}else for(;r<t;)if(i[o]=e[r],++r,++o==this.blockSize){this.compress_(i),o=0
+break}}this.inbuf_=o,this.total_+=t}},e.prototype.digest=function(){var e=[],t=8*this.total_
+this.inbuf_<56?this.update(this.pad_,56-this.inbuf_):this.update(this.pad_,this.blockSize-(this.inbuf_-56))
+for(var n=this.blockSize-1;n>=56;n--)this.buf_[n]=255&t,t/=256
+this.compress_(this.buf_)
+var r=0
+for(n=0;n<5;n++)for(var i=24;i>=0;i-=8)e[r]=this.chain_[n]>>i&255,++r
+return e},e}()
+var _=function(){function e(e,t){var n=this
+this.observers=[],this.unsubscribes=[],this.observerCount=0,this.task=Promise.resolve(),this.finalized=!1,this.onNoObservers=t,this.task.then(function(){e(n)}).catch(function(e){n.error(e)})}return e.prototype.next=function(e){this.forEachObserver(function(t){t.next(e)})},e.prototype.error=function(e){this.forEachObserver(function(t){t.error(e)}),this.close(e)},e.prototype.complete=function(){this.forEachObserver(function(e){e.complete()}),this.close()},e.prototype.subscribe=function(e,t,n){var r,i=this
+if(void 0===e&&void 0===t&&void 0===n)throw new Error("Missing Observer.")
+void 0===(r=function(e,t){if("object"!=typeof e||null===e)return!1
+for(var n=0,r=t;n<r.length;n++){var i=r[n]
+if(i in e&&"function"==typeof e[i])return!0}return!1}(e,["next","error","complete"])?e:{next:e,error:t,complete:n}).next&&(r.next=S),void 0===r.error&&(r.error=S),void 0===r.complete&&(r.complete=S)
+var o=this.unsubscribeOne.bind(this,this.observers.length)
+return this.finalized&&this.task.then(function(){try{i.finalError?r.error(i.finalError):r.complete()}catch(e){}}),this.observers.push(r),o},e.prototype.unsubscribeOne=function(e){void 0!==this.observers&&void 0!==this.observers[e]&&(delete this.observers[e],this.observerCount-=1,0===this.observerCount&&void 0!==this.onNoObservers&&this.onNoObservers(this))},e.prototype.forEachObserver=function(e){if(!this.finalized)for(var t=0;t<this.observers.length;t++)this.sendOne(t,e)},e.prototype.sendOne=function(e,t){var n=this
+this.task.then(function(){if(void 0!==n.observers&&void 0!==n.observers[e])try{t(n.observers[e])}catch(e){"undefined"!=typeof console&&console.error&&console.error(e)}})},e.prototype.close=function(e){var t=this
+this.finalized||(this.finalized=!0,void 0!==e&&(this.finalError=e),this.task.then(function(){t.observers=void 0,t.onNoObservers=void 0}))},e}()
+function S(){}function T(e,t,n){var r=""
+switch(t){case 1:r=n?"first":"First"
+break
+case 2:r=n?"second":"Second"
+break
+case 3:r=n?"third":"Third"
+break
+case 4:r=n?"fourth":"Fourth"
+break
+default:throw new Error("errorPrefix called with argumentNumber > 4.  Need to update it?")}var i=e+" failed: "
+return i+=r+" argument "}t.CONSTANTS=r,t.Deferred=h,t.ErrorFactory=b,t.FirebaseError=l,t.Sha1=k,t.assert=i,t.assertionError=o,t.async=function(e,t){return function(){for(var n=[],r=0;r<arguments.length;r++)n[r]=arguments[r]
+Promise.resolve(!0).then(function(){e.apply(void 0,n)}).catch(function(e){t&&t(e)})}},t.base64=a,t.base64Decode=c,t.base64Encode=function(e){var t=s(e)
+return a.encodeByteArray(t,!0)},t.clone=function(e){return y({},e)},t.contains=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.createSubscribe=function(e,t){var n=new _(e,t)
+return n.subscribe.bind(n)},t.decode=v,t.deepCopy=function(e){return u(void 0,e)},t.deepExtend=u,t.errorPrefix=T,t.every=function(e,t){for(var n in e)if(Object.prototype.hasOwnProperty.call(e,n)&&!t(n,e[n]))return!1
+return!0},t.extend=y,t.findKey=w,t.findValue=function(e,t,n){var r=w(e,t,n)
+return r&&e[r]},t.forEach=m,t.getAnyKey=function(e){for(var t in e)return t},t.getCount=function(e){var t=0
+for(var n in e)t++
+return t},t.getUA=f,t.getValues=function(e){var t=[],n=0
+for(var r in e)t[n++]=e[r]
+return t},t.isAdmin=function(e){var t=v(e).claims
+return"object"==typeof t&&!0===t.admin},t.isEmpty=function(e){for(var t in e)return!1
+return!0},t.isMobileCordova=function(){return"undefined"!=typeof window&&!!(window.cordova||window.phonegap||window.PhoneGap)&&/ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(f())},t.isNodeSdk=function(){return!0===r.NODE_CLIENT||!0===r.NODE_ADMIN},t.isNonNullObject=function(e){return"object"==typeof e&&null!==e},t.isReactNative=function(){return"object"==typeof navigator&&"ReactNative"===navigator.product},t.isValidFormat=function(e){var t=v(e).claims
+return!!t&&"object"==typeof t&&t.hasOwnProperty("iat")},t.isValidTimestamp=function(e){var t,n,r=v(e).claims,i=Math.floor((new Date).getTime()/1e3)
+return"object"==typeof r&&(r.hasOwnProperty("nbf")?t=r.nbf:r.hasOwnProperty("iat")&&(t=r.iat),n=r.hasOwnProperty("exp")?r.exp:t+86400),i&&t&&n&&i>=t&&i<=n},t.issuedAtTime=function(e){var t=v(e).claims
+return"object"==typeof t&&t.hasOwnProperty("iat")?t.iat:null},t.jsonEval=g,t.map=function(e,t,n){var r={}
+for(var i in e)r[i]=t.call(n,e[i],i,e)
+return r},t.patchCapture=function(e){var t=p
+return p=e,t},t.patchProperty=function(e,t,n){e[t]=n},t.querystring=function(e){var t=[]
+return m(e,function(e,n){Array.isArray(n)?n.forEach(function(n){t.push(encodeURIComponent(e)+"="+encodeURIComponent(n))}):t.push(encodeURIComponent(e)+"="+encodeURIComponent(n))}),t.length?"&"+t.join("&"):""},t.querystringDecode=function(e){var t={}
+return e.replace(/^\?/,"").split("&").forEach(function(e){if(e){var n=e.split("=")
+t[n[0]]=n[1]}}),t},t.safeGet=function(e,t){if(Object.prototype.hasOwnProperty.call(e,t))return e[t]},t.stringLength=function(e){for(var t=0,n=0;n<e.length;n++){var r=e.charCodeAt(n)
+r<128?t++:r<2048?t+=2:r>=55296&&r<=56319?(t+=4,n++):t+=3}return t},t.stringToByteArray=function(e){for(var t=[],n=0,r=0;r<e.length;r++){var o=e.charCodeAt(r)
+if(o>=55296&&o<=56319){var s=o-55296
+i(++r<e.length,"Surrogate pair missing trail surrogate."),o=65536+(s<<10)+(e.charCodeAt(r)-56320)}o<128?t[n++]=o:o<2048?(t[n++]=o>>6|192,t[n++]=63&o|128):o<65536?(t[n++]=o>>12|224,t[n++]=o>>6&63|128,t[n++]=63&o|128):(t[n++]=o>>18|240,t[n++]=o>>12&63|128,t[n++]=o>>6&63|128,t[n++]=63&o|128)}return t},t.stringify=function(e){return JSON.stringify(e)},t.validateArgCount=function(e,t,n,r){var i
+if(r<t?i="at least "+t:r>n&&(i=0===n?"none":"no more than "+n),i)throw new Error(e+" failed: Was called with "+r+(1===r?" argument.":" arguments.")+" Expects "+i+".")},t.validateCallback=function(e,t,n,r){if((!r||n)&&"function"!=typeof n)throw new Error(T(e,t,r)+"must be a valid function.")},t.validateContextObject=function(e,t,n,r){if((!r||n)&&("object"!=typeof n||null===n))throw new Error(T(e,t,r)+"must be a valid context object.")},t.validateNamespace=function(e,t,n,r){if((!r||n)&&"string"!=typeof n)throw new Error(T(e,t,r)+"must be a valid firebase namespace.")}},function(e,t){var n
+n=function(){return this}()
+try{n=n||new Function("return this")()}catch(e){"object"==typeof window&&(n=window)}e.exports=n},function(e,t,n){"use strict"
+n.r(t)
+var r=n(0),i=n.n(r),o=function(e,t){return(o=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var n in t)t.hasOwnProperty(n)&&(e[n]=t[n])})(e,t)}
+function s(e,t){function n(){this.constructor=e}o(e,t),e.prototype=null===t?Object.create(t):(n.prototype=t.prototype,new n)}var a=function(){return(a=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)}
+function c(e,t,n,r){return new(n||(n=Promise))(function(i,o){function s(e){try{c(r.next(e))}catch(e){o(e)}}function a(e){try{c(r.throw(e))}catch(e){o(e)}}function c(e){e.done?i(e.value):new n(function(t){t(e.value)}).then(s,a)}c((r=r.apply(e,t||[])).next())})}function u(e,t){var n,r,i,o,s={label:0,sent:function(){if(1&i[0])throw i[1]
+return i[1]},trys:[],ops:[]}
+return o={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(o[Symbol.iterator]=function(){return this}),o
+function a(o){return function(a){return function(o){if(n)throw new TypeError("Generator is already executing.")
+for(;s;)try{if(n=1,r&&(i=2&o[0]?r.return:o[0]?r.throw||((i=r.return)&&i.call(r),0):r.next)&&!(i=i.call(r,o[1])).done)return i
+switch(r=0,i&&(o=[2&o[0],i.value]),o[0]){case 0:case 1:i=o
+break
+case 4:return s.label++,{value:o[1],done:!1}
+case 5:s.label++,r=o[1],o=[0]
+continue
+case 7:o=s.ops.pop(),s.trys.pop()
+continue
+default:if(!(i=(i=s.trys).length>0&&i[i.length-1])&&(6===o[0]||2===o[0])){s=0
+continue}if(3===o[0]&&(!i||o[1]>i[0]&&o[1]<i[3])){s.label=o[1]
+break}if(6===o[0]&&s.label<i[1]){s.label=i[1],i=o
+break}if(i&&s.label<i[2]){s.label=i[2],s.ops.push(o)
+break}i[2]&&s.ops.pop(),s.trys.pop()
+continue}o=t.call(e,s)}catch(e){o=[6,e],r=0}finally{n=i=0}if(5&o[0])throw o[1]
+return{value:o[0]?o[1]:void 0,done:!0}}([o,a])}}}function h(e,t){var n="function"==typeof Symbol&&e[Symbol.iterator]
+if(!n)return e
+var r,i,o=n.call(e),s=[]
+try{for(;(void 0===t||t-- >0)&&!(r=o.next()).done;)s.push(r.value)}catch(e){i={error:e}}finally{try{r&&!r.done&&(n=o.return)&&n.call(o)}finally{if(i)throw i.error}}return s}var f,d,p,l=n(1),b=((f={})["only-available-in-window"]="This method is available in a Window context.",f["only-available-in-sw"]="This method is available in a service worker context.",f["should-be-overriden"]="This method should be overriden by extended classes.",f["bad-sender-id"]="Please ensure that 'messagingSenderId' is set correctly in the options passed into firebase.initializeApp().",f["permission-default"]="The required permissions were not granted and dismissed instead.",f["permission-blocked"]="The required permissions were not granted and blocked instead.",f["unsupported-browser"]="This browser doesn't support the API's required to use the firebase SDK.",f["notifications-blocked"]="Notifications have been blocked.",f["failed-serviceworker-registration"]="We are unable to register the default service worker. {$browserErrorMessage}",f["sw-registration-expected"]="A service worker registration was the expected input.",f["get-subscription-failed"]="There was an error when trying to get any existing Push Subscriptions.",f["invalid-saved-token"]="Unable to access details of the saved token.",f["sw-reg-redundant"]="The service worker being used for push was made redundant.",f["token-subscribe-failed"]="A problem occured while subscribing the user to FCM: {$message}",f["token-subscribe-no-token"]="FCM returned no token when subscribing the user to push.",f["token-subscribe-no-push-set"]="FCM returned an invalid response when getting an FCM token.",f["token-unsubscribe-failed"]="A problem occured while unsubscribing the user from FCM: {$message}",f["token-update-failed"]="A problem occured while updating the user from FCM: {$message}",f["token-update-no-token"]="FCM returned no token when updating the user to push.",f["use-sw-before-get-token"]="The useServiceWorker() method may only be called once and must be called before calling getToken() to ensure your service worker is used.",f["invalid-delete-token"]="You must pass a valid token into deleteToken(), i.e. the token from getToken().",f["delete-token-not-found"]="The deletion attempt for token could not be performed as the token was not found.",f["delete-scope-not-found"]="The deletion attempt for service worker scope could not be performed as the scope was not found.",f["bg-handler-function-expected"]="The input to setBackgroundMessageHandler() must be a function.",f["no-window-client-to-msg"]="An attempt was made to message a non-existant window client.",f["unable-to-resubscribe"]="There was an error while re-subscribing the FCM token for push messaging. Will have to resubscribe the user on next visit. {$message}",f["no-fcm-token-for-resubscribe"]="Could not find an FCM token and as a result, unable to resubscribe. Will have to resubscribe the user on next visit.",f["failed-to-delete-token"]="Unable to delete the currently saved token.",f["no-sw-in-reg"]="Even though the service worker registration was successful, there was a problem accessing the service worker itself.",f["incorrect-gcm-sender-id"]="Please change your web app manifest's 'gcm_sender_id' value to '103953800507' to use Firebase messaging.",f["bad-scope"]="The service worker scope must be a string with at least one character.",f["bad-vapid-key"]="The public VAPID key is not a Uint8Array with 65 bytes.",f["bad-subscription"]="The subscription must be a valid PushSubscription.",f["bad-token"]="The FCM Token used for storage / lookup was not a valid token string.",f["bad-push-set"]="The FCM push set used for storage / lookup was not not a valid push set string.",f["failed-delete-vapid-key"]="The VAPID key could not be deleted.",f["invalid-public-vapid-key"]="The public VAPID key must be a string.",f["use-public-key-before-get-token"]="The usePublicVapidKey() method may only be called once and must be called before calling getToken() to ensure your VAPID key is used.",f["public-vapid-key-decryption-failed"]="The public VAPID key did not equal 65 bytes when decrypted.",f),g=new l.ErrorFactory("messaging","Messaging",b),v=new Uint8Array([4,51,148,247,223,161,235,177,220,3,162,94,21,113,219,72,211,46,237,237,178,52,219,183,71,58,12,143,196,204,225,111,60,140,132,223,171,182,102,62,242,12,212,139,254,227,249,118,47,20,28,99,8,106,111,45,177,26,149,176,206,55,192,156,110]),m="https://fcm.googleapis.com"
+function y(e,t){if(null==e||null==t)return!1
+if(e===t)return!0
+if(e.byteLength!==t.byteLength)return!1
+for(var n=new DataView(e),r=new DataView(t),i=0;i<e.byteLength;i++)if(n.getUint8(i)!==r.getUint8(i))return!1
+return!0}function w(e){var t=new Uint8Array(e)
+return btoa(String.fromCharCode.apply(String,function(){for(var e=[],t=0;t<arguments.length;t++)e=e.concat(h(arguments[t]))
+return e}(t)))}function k(e){return w(e).replace(/=/g,"").replace(/\+/g,"-").replace(/\//g,"_")}!function(e){e.TYPE_OF_MSG="firebase-messaging-msg-type",e.DATA="firebase-messaging-msg-data"}(d||(d={})),function(e){e.PUSH_MSG_RECEIVED="push-msg-received",e.NOTIFICATION_CLICKED="notification-clicked"}(p||(p={}))
+var _=function(){function e(){}return e.prototype.getToken=function(e,t,n){return c(this,void 0,void 0,function(){var r,i,o,s,a,c,h,f
+return u(this,function(u){switch(u.label){case 0:r=k(t.getKey("p256dh")),i=k(t.getKey("auth")),o="authorized_entity="+e+"&endpoint="+t.endpoint+"&encryption_key="+r+"&encryption_auth="+i,y(n.buffer,v.buffer)||(s=k(n),o+="&application_pub_key="+s),(a=new Headers).append("Content-Type","application/x-www-form-urlencoded"),c={method:"POST",headers:a,body:o},u.label=1
+case 1:return u.trys.push([1,4,,5]),[4,fetch(m+"/fcm/connect/subscribe",c)]
+case 2:return[4,u.sent().json()]
+case 3:return h=u.sent(),[3,5]
+case 4:throw u.sent(),g.create("token-subscribe-failed")
+case 5:if(h.error)throw f=h.error.message,g.create("token-subscribe-failed",{message:f})
+if(!h.token)throw g.create("token-subscribe-no-token")
+if(!h.pushSet)throw g.create("token-subscribe-no-push-set")
+return[2,{token:h.token,pushSet:h.pushSet}]}})})},e.prototype.updateToken=function(e,t,n,r,i){return c(this,void 0,void 0,function(){var o,s,a,c,h,f,d,p
+return u(this,function(u){switch(u.label){case 0:o=k(r.getKey("p256dh")),s=k(r.getKey("auth")),a="push_set="+n+"&token="+t+"&authorized_entity="+e+"&endpoint="+r.endpoint+"&encryption_key="+o+"&encryption_auth="+s,y(i.buffer,v.buffer)||(c=k(i),a+="&application_pub_key="+c),(h=new Headers).append("Content-Type","application/x-www-form-urlencoded"),f={method:"POST",headers:h,body:a},u.label=1
+case 1:return u.trys.push([1,4,,5]),[4,fetch(m+"/fcm/connect/subscribe",f)]
+case 2:return[4,u.sent().json()]
+case 3:return d=u.sent(),[3,5]
+case 4:throw u.sent(),g.create("token-update-failed")
+case 5:if(d.error)throw p=d.error.message,g.create("token-update-failed",{message:p})
+if(!d.token)throw g.create("token-update-no-token")
+return[2,d.token]}})})},e.prototype.deleteToken=function(e,t,n){return c(this,void 0,void 0,function(){var r,i,o,s,a
+return u(this,function(c){switch(c.label){case 0:r="authorized_entity="+e+"&token="+t+"&pushSet="+n,(i=new Headers).append("Content-Type","application/x-www-form-urlencoded"),o={method:"POST",headers:i,body:r},c.label=1
+case 1:return c.trys.push([1,4,,5]),[4,fetch(m+"/fcm/connect/unsubscribe",o)]
+case 2:return[4,c.sent().json()]
+case 3:if((s=c.sent()).error)throw a=s.error.message,g.create("token-unsubscribe-failed",{message:a})
+return[3,5]
+case 4:throw c.sent(),g.create("token-unsubscribe-failed")
+case 5:return[2]}})})},e}()
+function S(e){for(var t=(e+"=".repeat((4-e.length%4)%4)).replace(/\-/g,"+").replace(/_/g,"/"),n=atob(t),r=new Uint8Array(n.length),i=0;i<n.length;++i)r[i]=n.charCodeAt(i)
+return r}var T="undefined",E="fcm_token_object_Store"
+function A(){var e=indexedDB.open(T)
+e.onerror=function(e){},e.onsuccess=function(t){!function(e){if(e.objectStoreNames.contains(E)){var t=e.transaction(E).objectStore(E),n=new _,r=t.openCursor()
+r.onerror=function(e){console.warn("Unable to cleanup old IDB.",e)},r.onsuccess=function(){var t=r.result
+if(t){var i=t.value
+n.deleteToken(i.fcmSenderId,i.fcmToken,i.fcmPushSet),t.continue()}else e.close(),indexedDB.deleteDatabase(T)}}}(e.result)}}var P=function(){function e(){this.dbPromise=null}return e.prototype.get=function(e){return this.createTransaction(function(t){return t.get(e)})},e.prototype.getIndex=function(e,t){return this.createTransaction(function(n){return n.index(e).get(t)})},e.prototype.put=function(e){return this.createTransaction(function(t){return t.put(e)},"readwrite")},e.prototype.delete=function(e){return this.createTransaction(function(t){return t.delete(e)},"readwrite")},e.prototype.closeDatabase=function(){return c(this,void 0,void 0,function(){return u(this,function(e){switch(e.label){case 0:return this.dbPromise?[4,this.dbPromise]:[3,2]
+case 1:e.sent().close(),this.dbPromise=null,e.label=2
+case 2:return[2]}})})},e.prototype.createTransaction=function(e,t){return void 0===t&&(t="readonly"),c(this,void 0,void 0,function(){var n,r,i,o
+return u(this,function(s){switch(s.label){case 0:return[4,this.getDb()]
+case 1:return n=s.sent(),r=n.transaction(this.objectStoreName,t),i=r.objectStore(this.objectStoreName),[4,C(e(i))]
+case 2:return o=s.sent(),[2,new Promise(function(e,t){r.oncomplete=function(){e(o)},r.onerror=function(){t(r.error)}})]}})})},e.prototype.getDb=function(){var e=this
+return this.dbPromise||(this.dbPromise=new Promise(function(t,n){var r=indexedDB.open(e.dbName,e.dbVersion)
+r.onsuccess=function(){t(r.result)},r.onerror=function(){e.dbPromise=null,n(r.error)},r.onupgradeneeded=function(t){return e.onDbUpgrade(r,t)}})),this.dbPromise},e}()
+function C(e){return new Promise(function(t,n){e.onsuccess=function(){t(e.result)},e.onerror=function(){n(e.error)}})}var D=function(e){function t(){var t=null!==e&&e.apply(this,arguments)||this
+return t.dbName="fcm_token_details_db",t.dbVersion=3,t.objectStoreName="fcm_token_object_Store",t}return s(t,e),t.prototype.onDbUpgrade=function(e,t){var n=e.result
+switch(t.oldVersion){case 0:(r=n.createObjectStore(this.objectStoreName,{keyPath:"swScope"})).createIndex("fcmSenderId","fcmSenderId",{unique:!1}),r.createIndex("fcmToken","fcmToken",{unique:!0})
+case 1:A()
+case 2:var r,i=(r=e.transaction.objectStore(this.objectStoreName)).openCursor()
+i.onsuccess=function(){var e=i.result
+if(e){var t=e.value,n=a({},t)
+t.createTime||(n.createTime=Date.now()),"string"==typeof t.vapidKey&&(n.vapidKey=S(t.vapidKey)),"string"==typeof t.auth&&(n.auth=S(t.auth).buffer),"string"==typeof t.auth&&(n.p256dh=S(t.p256dh).buffer),e.update(n),e.continue()}}}},t.prototype.getTokenDetailsFromToken=function(e){return c(this,void 0,void 0,function(){return u(this,function(t){if(!e)throw g.create("bad-token")
+return O({fcmToken:e}),[2,this.getIndex("fcmToken",e)]})})},t.prototype.getTokenDetailsFromSWScope=function(e){return c(this,void 0,void 0,function(){return u(this,function(t){if(!e)throw g.create("bad-scope")
+return O({swScope:e}),[2,this.get(e)]})})},t.prototype.saveTokenDetails=function(e){return c(this,void 0,void 0,function(){return u(this,function(t){if(!e.swScope)throw g.create("bad-scope")
+if(!e.vapidKey)throw g.create("bad-vapid-key")
+if(!e.endpoint||!e.auth||!e.p256dh)throw g.create("bad-subscription")
+if(!e.fcmSenderId)throw g.create("bad-sender-id")
+if(!e.fcmToken)throw g.create("bad-token")
+if(!e.fcmPushSet)throw g.create("bad-push-set")
+return O(e),[2,this.put(e)]})})},t.prototype.deleteToken=function(e){return c(this,void 0,void 0,function(){var t
+return u(this,function(n){switch(n.label){case 0:return"string"!=typeof e||0===e.length?[2,Promise.reject(g.create("invalid-delete-token"))]:[4,this.getTokenDetailsFromToken(e)]
+case 1:if(!(t=n.sent()))throw g.create("delete-token-not-found")
+return[4,this.delete(t.swScope)]
+case 2:return n.sent(),[2,t]}})})},t}(P)
+function O(e){if(e.fcmToken&&("string"!=typeof e.fcmToken||0===e.fcmToken.length))throw g.create("bad-token")
+if(e.swScope&&("string"!=typeof e.swScope||0===e.swScope.length))throw g.create("bad-scope")
+if(e.vapidKey&&(!(e.vapidKey instanceof Uint8Array)||65!==e.vapidKey.length))throw g.create("bad-vapid-key")
+if(e.endpoint&&("string"!=typeof e.endpoint||0===e.endpoint.length))throw g.create("bad-subscription")
+if(e.auth&&!(e.auth instanceof ArrayBuffer))throw g.create("bad-subscription")
+if(e.p256dh&&!(e.p256dh instanceof ArrayBuffer))throw g.create("bad-subscription")
+if(e.fcmSenderId&&("string"!=typeof e.fcmSenderId||0===e.fcmSenderId.length))throw g.create("bad-sender-id")
+if(e.fcmPushSet&&("string"!=typeof e.fcmPushSet||0===e.fcmPushSet.length))throw g.create("bad-push-set")}var N=function(e){function t(){var t=null!==e&&e.apply(this,arguments)||this
+return t.dbName="fcm_vapid_details_db",t.dbVersion=1,t.objectStoreName="fcm_vapid_object_Store",t}return s(t,e),t.prototype.onDbUpgrade=function(e){e.result.createObjectStore(this.objectStoreName,{keyPath:"swScope"})},t.prototype.getVapidFromSWScope=function(e){return c(this,void 0,void 0,function(){var t
+return u(this,function(n){switch(n.label){case 0:if("string"!=typeof e||0===e.length)throw g.create("bad-scope")
+return[4,this.get(e)]
+case 1:return[2,(t=n.sent())?t.vapidKey:void 0]}})})},t.prototype.saveVapidDetails=function(e,t){return c(this,void 0,void 0,function(){var n
+return u(this,function(r){if("string"!=typeof e||0===e.length)throw g.create("bad-scope")
+if(null===t||65!==t.length)throw g.create("bad-vapid-key")
+return n={swScope:e,vapidKey:t},[2,this.put(n)]})})},t.prototype.deleteVapidDetails=function(e){return c(this,void 0,void 0,function(){var t
+return u(this,function(n){switch(n.label){case 0:return[4,this.getVapidFromSWScope(e)]
+case 1:if(!(t=n.sent()))throw g.create("delete-scope-not-found")
+return[4,this.delete(e)]
+case 2:return n.sent(),[2,t]}})})},t}(P),I="messagingSenderId",M=function(){function e(e){var t=this
+if(!e.options[I]||"string"!=typeof e.options[I])throw g.create("bad-sender-id")
+this.messagingSenderId=e.options[I],this.tokenDetailsModel=new D,this.vapidDetailsModel=new N,this.iidModel=new _,this.app=e,this.INTERNAL={delete:function(){return t.delete()}}}return e.prototype.getToken=function(){return c(this,void 0,void 0,function(){var e,t,n,r,i
+return u(this,function(o){switch(o.label){case 0:if("denied"===(e=this.getNotificationPermission_()))throw g.create("notifications-blocked")
+return"granted"!==e?[2,null]:[4,this.getSWRegistration_()]
+case 1:return t=o.sent(),[4,this.getPublicVapidKey_()]
+case 2:return n=o.sent(),[4,this.getPushSubscription(t,n)]
+case 3:return r=o.sent(),[4,this.tokenDetailsModel.getTokenDetailsFromSWScope(t.scope)]
+case 4:return(i=o.sent())?[2,this.manageExistingToken(t,r,n,i)]:[2,this.getNewToken(t,r,n)]}})})},e.prototype.manageExistingToken=function(e,t,n,r){return c(this,void 0,void 0,function(){return u(this,function(i){switch(i.label){case 0:return function(e,t,n){if(!n.vapidKey||!y(t.buffer,n.vapidKey.buffer))return!1
+var r=e.endpoint===n.endpoint,i=y(e.getKey("auth"),n.auth),o=y(e.getKey("p256dh"),n.p256dh)
+return r&&i&&o}(t,n,r)?Date.now()<r.createTime+6048e5?[2,r.fcmToken]:[2,this.updateToken(e,t,n,r)]:[4,this.deleteTokenFromDB(r.fcmToken)]
+case 1:return i.sent(),[2,this.getNewToken(e,t,n)]}})})},e.prototype.updateToken=function(e,t,n,r){return c(this,void 0,void 0,function(){var i,o,s
+return u(this,function(a){switch(a.label){case 0:return a.trys.push([0,4,,6]),[4,this.iidModel.updateToken(this.messagingSenderId,r.fcmToken,r.fcmPushSet,t,n)]
+case 1:return i=a.sent(),o={swScope:e.scope,vapidKey:n,fcmSenderId:this.messagingSenderId,fcmToken:i,fcmPushSet:r.fcmPushSet,createTime:Date.now(),endpoint:t.endpoint,auth:t.getKey("auth"),p256dh:t.getKey("p256dh")},[4,this.tokenDetailsModel.saveTokenDetails(o)]
+case 2:return a.sent(),[4,this.vapidDetailsModel.saveVapidDetails(e.scope,n)]
+case 3:return a.sent(),[2,i]
+case 4:return s=a.sent(),[4,this.deleteToken(r.fcmToken)]
+case 5:throw a.sent(),s
+case 6:return[2]}})})},e.prototype.getNewToken=function(e,t,n){return c(this,void 0,void 0,function(){var r,i
+return u(this,function(o){switch(o.label){case 0:return[4,this.iidModel.getToken(this.messagingSenderId,t,n)]
+case 1:return r=o.sent(),i={swScope:e.scope,vapidKey:n,fcmSenderId:this.messagingSenderId,fcmToken:r.token,fcmPushSet:r.pushSet,createTime:Date.now(),endpoint:t.endpoint,auth:t.getKey("auth"),p256dh:t.getKey("p256dh")},[4,this.tokenDetailsModel.saveTokenDetails(i)]
+case 2:return o.sent(),[4,this.vapidDetailsModel.saveVapidDetails(e.scope,n)]
+case 3:return o.sent(),[2,r.token]}})})},e.prototype.deleteToken=function(e){return c(this,void 0,void 0,function(){var t,n
+return u(this,function(r){switch(r.label){case 0:return[4,this.deleteTokenFromDB(e)]
+case 1:return r.sent(),[4,this.getSWRegistration_()]
+case 2:return(t=r.sent())?[4,t.pushManager.getSubscription()]:[3,4]
+case 3:if(n=r.sent())return[2,n.unsubscribe()]
+r.label=4
+case 4:return[2,!0]}})})},e.prototype.deleteTokenFromDB=function(e){return c(this,void 0,void 0,function(){var t
+return u(this,function(n){switch(n.label){case 0:return[4,this.tokenDetailsModel.deleteToken(e)]
+case 1:return t=n.sent(),[4,this.iidModel.deleteToken(t.fcmSenderId,t.fcmToken,t.fcmPushSet)]
+case 2:return n.sent(),[2]}})})},e.prototype.getPushSubscription=function(e,t){return e.pushManager.getSubscription().then(function(n){return n||e.pushManager.subscribe({userVisibleOnly:!0,applicationServerKey:t})})},e.prototype.requestPermission=function(){throw g.create("only-available-in-window")},e.prototype.useServiceWorker=function(e){throw g.create("only-available-in-window")},e.prototype.usePublicVapidKey=function(e){throw g.create("only-available-in-window")},e.prototype.onMessage=function(e,t,n){throw g.create("only-available-in-window")},e.prototype.onTokenRefresh=function(e,t,n){throw g.create("only-available-in-window")},e.prototype.setBackgroundMessageHandler=function(e){throw g.create("only-available-in-sw")},e.prototype.delete=function(){return c(this,void 0,void 0,function(){return u(this,function(e){switch(e.label){case 0:return[4,Promise.all([this.tokenDetailsModel.closeDatabase(),this.vapidDetailsModel.closeDatabase()])]
+case 1:return e.sent(),[2]}})})},e.prototype.getNotificationPermission_=function(){return Notification.permission},e.prototype.getTokenDetailsModel=function(){return this.tokenDetailsModel},e.prototype.getVapidDetailsModel=function(){return this.vapidDetailsModel},e.prototype.getIidModel=function(){return this.iidModel},e}()
+var j=function(e){function t(t){var n=e.call(this,t)||this
+return n.bgMessageHandler=null,self.addEventListener("push",function(e){n.onPush(e)}),self.addEventListener("pushsubscriptionchange",function(e){n.onSubChange(e)}),self.addEventListener("notificationclick",function(e){n.onNotificationClick(e)}),n}return s(t,e),t.prototype.onPush=function(e){e.waitUntil(this.onPush_(e))},t.prototype.onSubChange=function(e){e.waitUntil(this.onSubChange_(e))},t.prototype.onNotificationClick=function(e){e.waitUntil(this.onNotificationClick_(e))},t.prototype.onPush_=function(e){return c(this,void 0,void 0,function(){var t,n,r,i,o,s
+return u(this,function(a){switch(a.label){case 0:if(!e.data)return[2]
+try{t=e.data.json()}catch(e){return[2]}return[4,this.hasVisibleClients_()]
+case 1:return a.sent()?[2,this.sendMessageToWindowClients_(t)]:(n=this.getNotificationData_(t))?(r=n.title||"",[4,this.getSWRegistration_()]):[3,3]
+case 2:return i=a.sent(),o=n.actions,s=Notification.maxActions,o&&s&&o.length>s&&console.warn("This browser only supports "+s+" actions.The remaining actions will not be displayed."),[2,i.showNotification(r,n)]
+case 3:return this.bgMessageHandler?[4,this.bgMessageHandler(t)]:[3,5]
+case 4:return a.sent(),[2]
+case 5:return[2]}})})},t.prototype.onSubChange_=function(e){return c(this,void 0,void 0,function(){var e,t,n,r
+return u(this,function(i){switch(i.label){case 0:return i.trys.push([0,2,,3]),[4,this.getSWRegistration_()]
+case 1:return e=i.sent(),[3,3]
+case 2:throw t=i.sent(),g.create("unable-to-resubscribe",{message:t})
+case 3:return i.trys.push([3,5,,8]),[4,e.pushManager.getSubscription()]
+case 4:return i.sent(),[3,8]
+case 5:return n=i.sent(),[4,this.getTokenDetailsModel().getTokenDetailsFromSWScope(e.scope)]
+case 6:if(!(r=i.sent()))throw n
+return[4,this.deleteToken(r.fcmToken)]
+case 7:throw i.sent(),n
+case 8:return[2]}})})},t.prototype.onNotificationClick_=function(e){return c(this,void 0,void 0,function(){var t,n,r,i
+return u(this,function(o){switch(o.label){case 0:return e.notification&&e.notification.data&&e.notification.data.FCM_MSG?e.action?[2]:(e.stopImmediatePropagation(),e.notification.close(),(t=e.notification.data.FCM_MSG).notification&&(n=t.fcmOptions&&t.fcmOptions.link||t.notification.click_action)?[4,this.getWindowClient_(n)]:[2]):[2]
+case 1:return(r=o.sent())?[3,3]:[4,self.clients.openWindow(n)]
+case 2:return r=o.sent(),[3,5]
+case 3:return[4,r.focus()]
+case 4:r=o.sent(),o.label=5
+case 5:return r?(delete t.notification,delete t.fcmOptions,i=V(p.NOTIFICATION_CLICKED,t),[2,this.attemptToMessageClient_(r,i)]):[2]}})})},t.prototype.getNotificationData_=function(e){var t
+if(e&&"object"==typeof e.notification){var n=a({},e.notification)
+return n.data=a({},e.notification.data,((t={}).FCM_MSG=e,t)),n}},t.prototype.setBackgroundMessageHandler=function(e){if(!e||"function"!=typeof e)throw g.create("bg-handler-function-expected")
+this.bgMessageHandler=e},t.prototype.getWindowClient_=function(e){return c(this,void 0,void 0,function(){var t,n,r,i
+return u(this,function(o){switch(o.label){case 0:return t=new URL(e,self.location.href).href,[4,x()]
+case 1:for(n=o.sent(),r=null,i=0;i<n.length;i++)if(new URL(n[i].url,self.location.href).href===t){r=n[i]
+break}return[2,r]}})})},t.prototype.attemptToMessageClient_=function(e,t){return c(this,void 0,void 0,function(){return u(this,function(n){if(!e)throw g.create("no-window-client-to-msg")
+return e.postMessage(t),[2]})})},t.prototype.hasVisibleClients_=function(){return c(this,void 0,void 0,function(){return u(this,function(e){switch(e.label){case 0:return[4,x()]
+case 1:return[2,e.sent().some(function(e){return"visible"===e.visibilityState&&!e.url.startsWith("chrome-extension://")})]}})})},t.prototype.sendMessageToWindowClients_=function(e){return c(this,void 0,void 0,function(){var t,n,r=this
+return u(this,function(i){switch(i.label){case 0:return[4,x()]
+case 1:return t=i.sent(),n=V(p.PUSH_MSG_RECEIVED,e),[4,Promise.all(t.map(function(e){return r.attemptToMessageClient_(e,n)}))]
+case 2:return i.sent(),[2]}})})},t.prototype.getSWRegistration_=function(){return c(this,void 0,void 0,function(){return u(this,function(e){return[2,self.registration]})})},t.prototype.getPublicVapidKey_=function(){return c(this,void 0,void 0,function(){var e,t
+return u(this,function(n){switch(n.label){case 0:return[4,this.getSWRegistration_()]
+case 1:if(!(e=n.sent()))throw g.create("sw-registration-expected")
+return[4,this.getVapidDetailsModel().getVapidFromSWScope(e.scope)]
+case 2:return null==(t=n.sent())?[2,v]:[2,t]}})})},t}(M)
+function x(){return self.clients.matchAll({type:"window",includeUncontrolled:!0})}function V(e,t){var n
+return(n={})[d.TYPE_OF_MSG]=e,n[d.DATA]=t,n}var F,L,W=function(e){function t(t){var n=e.call(this,t)||this
+return n.registrationToUse=null,n.publicVapidKeyToUse=null,n.manifestCheckPromise=null,n.messageObserver=null,n.tokenRefreshObserver=null,n.onMessageInternal=Object(l.createSubscribe)(function(e){n.messageObserver=e}),n.onTokenRefreshInternal=Object(l.createSubscribe)(function(e){n.tokenRefreshObserver=e}),n.setupSWMessageListener_(),n}return s(t,e),t.prototype.getToken=function(){return c(this,void 0,void 0,function(){return u(this,function(t){switch(t.label){case 0:return this.manifestCheckPromise||(this.manifestCheckPromise=function(){return c(this,void 0,void 0,function(){var e,t
+return u(this,function(n){switch(n.label){case 0:if(!(e=document.querySelector('link[rel="manifest"]')))return[2]
+n.label=1
+case 1:return n.trys.push([1,4,,5]),[4,fetch(e.href)]
+case 2:return[4,n.sent().json()]
+case 3:return t=n.sent(),[3,5]
+case 4:return n.sent(),[2]
+case 5:if(!t||!t.gcm_sender_id)return[2]
+if("103953800507"!==t.gcm_sender_id)throw g.create("incorrect-gcm-sender-id")
+return[2]}})})}()),[4,this.manifestCheckPromise]
+case 1:return t.sent(),[2,e.prototype.getToken.call(this)]}})})},t.prototype.requestPermission=function(){return c(this,void 0,void 0,function(){var e
+return u(this,function(t){switch(t.label){case 0:return"granted"===this.getNotificationPermission_()?[2]:[4,Notification.requestPermission()]
+case 1:if("granted"===(e=t.sent()))return[2]
+throw"denied"===e?g.create("permission-blocked"):g.create("permission-default")}})})},t.prototype.useServiceWorker=function(e){if(!(e instanceof ServiceWorkerRegistration))throw g.create("sw-registration-expected")
+if(null!=this.registrationToUse)throw g.create("use-sw-before-get-token")
+this.registrationToUse=e},t.prototype.usePublicVapidKey=function(e){if("string"!=typeof e)throw g.create("invalid-public-vapid-key")
+if(null!=this.publicVapidKeyToUse)throw g.create("use-public-key-before-get-token")
+var t=S(e)
+if(65!==t.length)throw g.create("public-vapid-key-decryption-failed")
+this.publicVapidKeyToUse=t},t.prototype.onMessage=function(e,t,n){return"function"==typeof e?this.onMessageInternal(e,t,n):this.onMessageInternal(e)},t.prototype.onTokenRefresh=function(e,t,n){return"function"==typeof e?this.onTokenRefreshInternal(e,t,n):this.onTokenRefreshInternal(e)},t.prototype.waitForRegistrationToActivate_=function(e){var t=e.installing||e.waiting||e.active
+return new Promise(function(n,r){if(t)if("activated"!==t.state)if("redundant"!==t.state){var i=function(){if("activated"===t.state)n(e)
+else{if("redundant"!==t.state)return
+r(g.create("sw-reg-redundant"))}t.removeEventListener("statechange",i)}
+t.addEventListener("statechange",i)}else r(g.create("sw-reg-redundant"))
+else n(e)
+else r(g.create("no-sw-in-reg"))})},t.prototype.getSWRegistration_=function(){var e=this
+return this.registrationToUse?this.waitForRegistrationToActivate_(this.registrationToUse):(this.registrationToUse=null,navigator.serviceWorker.register("/firebase-messaging-sw.js",{scope:"/firebase-cloud-messaging-push-scope"}).catch(function(e){throw g.create("failed-serviceworker-registration",{browserErrorMessage:e.message})}).then(function(t){return e.waitForRegistrationToActivate_(t).then(function(){return e.registrationToUse=t,t.update(),t})}))},t.prototype.getPublicVapidKey_=function(){return c(this,void 0,void 0,function(){return u(this,function(e){return this.publicVapidKeyToUse?[2,this.publicVapidKeyToUse]:[2,v]})})},t.prototype.setupSWMessageListener_=function(){var e=this
+navigator.serviceWorker.addEventListener("message",function(t){if(t.data&&t.data[d.TYPE_OF_MSG]){var n=t.data
+switch(n[d.TYPE_OF_MSG]){case p.PUSH_MSG_RECEIVED:case p.NOTIFICATION_CLICKED:var r=n[d.DATA]
+e.messageObserver&&e.messageObserver.next(r)}}},!1)},t}(M)
+function U(){return self&&"ServiceWorkerGlobalScope"in self?"PushManager"in self&&"Notification"in self&&ServiceWorkerRegistration.prototype.hasOwnProperty("showNotification")&&PushSubscription.prototype.hasOwnProperty("getKey"):navigator.cookieEnabled&&"serviceWorker"in navigator&&"PushManager"in window&&"Notification"in window&&"fetch"in window&&ServiceWorkerRegistration.prototype.hasOwnProperty("showNotification")&&PushSubscription.prototype.hasOwnProperty("getKey")}function R(e,t){for(var n=0;n<t.length;n++){var r=t[n]
+r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}F=i.a,L={isSupported:U},F.INTERNAL.registerService("messaging",function(e){if(!U())throw g.create("unsupported-browser")
+return self&&"ServiceWorkerGlobalScope"in self?new j(e):new W(e)},L),n.d(t,"ethinkingPush",function(){return K})
+var K=function(){function e(t,n,r){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),i.a.initializeApp({messagingSenderId:t}),this.customer=null,this._serviceWorkerPath=r,this._isSubscribed=!1,this._appId="",this._appUser="",this._appPassword="",this.headers={},this.ethinkingCustomer={isSubscribed:!1,deviceId:"",tags:[],lastVisit:Date.now()},this._projectName=n,this.baseUrl="https://"+this._projectName+".push.delivery/push-api",this.permission=String(Notification.permission),this.messaging=i.a.messaging()}var t,n,r
+return t=e,r=[{key:"setLocalstorage",value:function(e){localStorage.setItem("ethinkingCustomer",JSON.stringify(e))}},{key:"getEthinkingCustomer",value:function(){try{return JSON.parse(localStorage.getItem("ethinkingCustomer"))}catch(e){}}},{key:"_isIE11",value:function(){return!!navigator.userAgent.match(/Trident.*rv[ :]*11\./)}}],(n=[{key:"init",value:function(e){var t=this
+navigator.userAgent.match("Edge")||this.constructor._isIE11()||(navigator.userAgent.match("Chrome")||navigator.userAgent.match("Firefox"))&&("serviceWorker"in navigator?(navigator.serviceWorker.register(this._serviceWorkerPath).then(function(e){t.messaging.useServiceWorker(e),"granted"===Notification.permission&&t.messaging.getToken().then(function(e){return t.customer.deviceId=e,t.constructor.setLocalstorage(t.customer),!0}).catch(function(e){return console.log("failed!",e),!1})}),this.checkLocalStorageStatus(),this.receiveNotificationOnPage(),this._appId=e.appId,this._appPassword=e.password,this._appUser=e.user,this.headers={Authorization:"Basic "+btoa(this._appUser+":"+this._appPassword),"Content-Type":"application/json"},this.customer&&this.customer.lastVisit&&this.customer.isSubscribed&&Date.now()-this.customer.lastVisit>=288e5&&this._updateTags()):console.warn("Serviceworker and Push not supported"))}},{key:"getTags",value:function(){var e=this
+return navigator.userAgent.match("Edge")||this.constructor._isIE11()?void 0:new Promise(function(t,n){e.checkLocalStorageStatus(),e.customer.tags&&e.customer.tags.length>0?t(e.customer.tags):e._isSubscribed?e.getUserTags().then(function(n){var r=[]
+if(n[1].length>0){var i=n[1].map(function(e){return e.id})
+n[0][0].tags.forEach(function(e){r.push({id:e.id,name:e.name,subscribed:i.includes(e.id)})}),e.customer.tags=r,e.constructor.setLocalstorage(e.customer),t(r)}else n[0][0].tags.forEach(function(e){r.push({id:e.id,name:e.name,subscribed:!1})}),e.customer.tags=r,e.constructor.setLocalstorage(e.customer),t(r)}).catch(function(){(navigator.userAgent.match("Edge")||navigator.appVersion.indexOf("Trident/")>-1)&&n()}):e.getAllTags().then(function(n){var r=[]
+n[0].tags.forEach(function(e){r.push({id:e.id,name:e.name,subscribed:!1})}),e.customer.tags=r,e.constructor.setLocalstorage(e.customer),t(r)}).catch(function(){(navigator.userAgent.match("Edge")||navigator.appVersion.indexOf("Trident/")>-1)&&n()})})}},{key:"subscribe",value:function(e){this.customer.isSubscribed&&"granted"!==Notification.permission&&(this.customer.isSubscribed=!1,this.customer.tags=[],this.customer.deviceId="",this.constructor.setLocalstorage(this.customer)),this.constructor._isIE11()||this.getPermission(e)}},{key:"getPermission",value:function(e){var t=this
+this.checkLocalStorageStatus(),this.constructor._isIE11()||(this.customer.deviceId?this._subscribeUser(e):this.messaging.requestPermission().then(function(){return t.messaging.getToken()}).then(function(n){return t.customer.deviceId=n,t.constructor.setLocalstorage(t.customer),t._subscribeUser(e),!0}).catch(function(){return!1}))}},{key:"unsubscribe",value:function(){this.constructor._isIE11()||this._unsubscribeUser()}},{key:"registerTags",value:function(e){this.constructor._isIE11()||this.updateSubscription("reg",e)}},{key:"unregisterTags",value:function(e){this.constructor._isIE11()||this.updateSubscription("ureg",e)}},{key:"checkPermission",value:function(){return"denied"!==(Notification.permission||this.permission)}},{key:"checkLocalStorageStatus",value:function(){localStorage.getItem("ethinkingCustomer")?(this.customer=this.constructor.getEthinkingCustomer(),this._isSubscribed=this.customer.isSubscribed):(this.customer=this.ethinkingCustomer,this._isSubscribed=!1,this.constructor.setLocalstorage(this.customer))}},{key:"getAllTags",value:function(){return this.postData({appId:this._appId,platformId:"7"},"/tags")}},{key:"_updateTags",value:function(){var e=this
+return new Promise(function(t,n){e.getUserTags().then(function(n){var r=[]
+if(n[1].length>0){var i=n[1].map(function(e){return e.id})
+n[0][0].tags.forEach(function(e){r.push({id:e.id,name:e.name,subscribed:i.includes(e.id)})}),e.customer.tags=r,e.customer.lastVisit=Date.now(),e.constructor.setLocalstorage(e.customer),t(r)}})})}},{key:"getUserTags",value:function(){return Promise.all([this.postData({appId:this._appId,platformId:"7"},"/tags"),this.postData({appId:this._appId,platformId:"7",deviceId:this.customer.deviceId},"/list")])}},{key:"updateSubscription",value:function(e,t){var n=this
+if(!this.customer.isSubscribed)return!1
+this.postData({tagId:t,appId:this._appId,platformId:"7",deviceId:this.customer.deviceId},"/"+e).then(function(){console.info("Updated tags",t),n.customer.tags&&n.customer.tags.length>0?n._formatTags(t):(n.customer.tags=t,n.constructor.setLocalstorage(n.customer))})}},{key:"postData",value:function(e,t){return fetch(this.baseUrl+t,{method:"POST",headers:this.headers,body:JSON.stringify(e)}).then(function(e){return e.clone().json().catch(function(){return e.text()})})}},{key:"_formatTags",value:function(e){this.customer.tags.forEach(function(t){Array.isArray(e)&&e.includes(t.id)?t.subscribed=!t.subscribed:(e=parseInt(e,10),t.id===e&&(t.subscribed=!t.subscribed))}),this.constructor.setLocalstorage(this.customer)}},{key:"_subscribeUser",value:function(e){this.permission=Notification.permission,"granted"!==this.permission?this.updateSubscription("reg",e):(this.customer.isSubscribed=!0,this.constructor.setLocalstorage(this.customer),this.updateSubscription("reg",e))}},{key:"_unsubscribeUser",value:function(){if(!this.customer.isSubscribed)return!1
+var e=this.customer.tags.map(function(e){return e.id})
+this.updateSubscription("ureg",e),this.customer.isSubscribed=!1,this.customer.tags=[],this.customer.deviceId="",this.constructor.setLocalstorage(this.customer)}},{key:"receiveNotificationOnPage",value:function(){this.messaging.onMessage(function(e){var t=e.data,n=t.title,r={body:t.body||t.message,silent:!0,icon:e.data.icon,data:e.data}
+if(e.data.url!==window.location.href){var i=new Notification(n,r)
+i.onclick=function(e){e.preventDefault(),i.close()}}})}}])&&R(t.prototype,n),r&&R(t,r),e}()}])})

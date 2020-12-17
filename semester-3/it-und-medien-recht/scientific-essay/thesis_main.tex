@@ -31,6 +31,8 @@
 \usepackage{fancybox}
 \usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=2cm]{geometry}
 \usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{gensymb}
 \usepackage{colortbl}
 \usepackage[capposition=top]{floatrow}
 \usepackage{array}
@@ -43,16 +45,16 @@
 % Fettschrift laut Leitfaden 2018 S. 45
 \usepackage[singlelinecheck=false, labelfont=bf, font=bf]{caption}
 \usepackage{caption}
-\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
 \usepackage{amssymb}
 \usepackage{mathptmx}
 %\usepackage{minted} %Kann für schöneres Syntax Highlighting genutzt werden. ACHTUNG: Python muss installiert sein.
 \usepackage[scaled=0.9]{helvet} % Behebt, zusammen mit Package courier, pixelige Überschriften. Ist, zusammen mit mathptx, dem times-Package vorzuziehen. Details: https://latex-kurs.de/fragen/schriftarten/Times_New_Roman.html
 \usepackage{courier}
 \usepackage{amsmath}
+\usepackage{enumitem,cleveref}
 \usepackage[table]{xcolor}
 \usepackage{marvosym}			% Verwendung von Symbolen, z.B. perfektes Eurozeichen
-\usepackage[colorlinks=true,linkcolor=black]{hyperref}
 \definecolor{darkblack}{rgb}{0,0,0}
 \hypersetup{colorlinks=true, breaklinks=true, linkcolor=darkblack, menucolor=darkblack, urlcolor=darkblack}
 \renewcommand\familydefault{\sfdefault}
@@ -302,7 +304,7 @@ mincrossrefs = 1
 	\vfill
 	\begin{tabbing}
 		Links \= Mitte \=Mittez \= Rechts\kill
-		\langde{Betreuer} % für Hausarbeiten
+		\langde{Lehrender} % für Hausarbeiten
     %\langde{Erstgutachter} % für Bachelor- / Master-Thesis
 		\langen{Advisor}: \> \> \>\myBetreuer\\
 		\langde{Matrikelnummer}
@@ -339,6 +341,7 @@ mincrossrefs = 1
 % Tabellenverzeichnis
 %-----------------------------------
 \listoftables
+Es wurden keine Tabellen verwendet.
 \newpage
 %-----------------------------------
 % Abkürzungsverzeichnis
@@ -359,22 +362,22 @@ mincrossrefs = 1
 % Kapitel / Inhalte
 %-----------------------------------
 \input{kapitel/01_einleitung}
-%TODO
-\input{kapitel/06_fazit}
+\input{kapitel/02_hauptteil}
+\input{kapitel/03_fazit}
 
 %-----------------------------------
 % Anhang
 %-----------------------------------
-\newpage
-\section*{Anhang} %Überschrift "Anhang", ohne Nummerierung
-\addcontentsline{toc}{section}{\langde{Anhang}\langen{Appendix}} %Den Anhang ohne Nummer zum Inhaltsverzeichnis hinzufügen
-\begin{appendices}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
-	\renewcommand{\thesection}{\langde{Anhang}\langen{Appendix} \arabic{section}:}
-	\renewcommand\thesubsection{\langde{Anhang}\langen{Appendix} \arabic{section}.\arabic{subsection}:}
-	\input{kapitel/anhang/anhang}
-\end{appendices}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+% \newpage
+% \section*{Anhang} %Überschrift "Anhang", ohne Nummerierung
+% \addcontentsline{toc}{section}{\langde{Anhang}\langen{Appendix}} %Den Anhang ohne Nummer zum Inhaltsverzeichnis hinzufügen
+% \begin{appendices}
+% \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
+% 	\renewcommand{\thesection}{\langde{Anhang}\langen{Appendix} \arabic{section}:}
+% 	\renewcommand\thesubsection{\langde{Anhang}\langen{Appendix} \arabic{section}.\arabic{subsection}:}
+% 	%\input{kapitel/anhang/anhang}
+% \end{appendices}
+% \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 %-----------------------------------
 % Literaturverzeichnis
@@ -394,7 +397,7 @@ mincrossrefs = 1
 % Keine Trennung der Werke im Literaturverzeichnis nach ihrer Art
 % (Online/nicht-Online)
 %\begin{RaggedRight}
-%\printbibliography
+%\printbibliography[heading=bibintoc,title={Literaturverzeichnis}]
 %\end{RaggedRight}
 
 % Alternative Darstellung, die laut Leitfaden genutzt werden sollte.
