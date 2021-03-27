@@ -1,0 +1,73 @@
+- Die Sicherheit von Türzugriffssystemen
+  - Relevanz
+    - Sensisble Daten laufen auf Hardware die Geshcützt werden muss; Hardware
+      muss auch vor Diebstahl geschützt werden
+    - RZ-Zertifizierung (ISO 27001? GDPR? IEEE? Rechtlichet Vorgaben)
+    - Sicherheit evolviert, weil Angreifer ausgeklügelter werden
+    - Auditing bei Elektrischen Schlössern
+  - Forschungsfrage
+    - Welche Arten von Türzugriffssystemen gibt es und wie sicher sind diese?
+    - Welches Zugriffssystem wird wann verwendet?
+  - Vorherige Arbeit
+    - https://lsamichigan.org/Tech/Key%20Control%20Guide%20-%20Medeco,%20CorRus,%20Sargent.pdf
+    - https://www.assaabloydss.com/Local/DSS/Security%20Continuum/key%20systems/key%20system%20borchures/Complete2340.001%20Master%20Keying%20brochure%206.pdf
+- Wo kann DevOps eingesetzt werden? SaaS Unternehmen, IT Dienstleister, Industrie
+  - Relevanz
+    - DevOps ist eine Bewegung in der Softwareentwicklung und Betrieb, der
+      zunehmend häufiger Eingestetzt wird (Citation needed)
+    - "Neue" Möglichkeiten in Ops sorgen für Dev-ähnliches Arbeiten (GitOps,
+      Ansible, IaC)
+    - CargoCulting ist nicht gut; wo kann DevOps eingezetzt werden, dass es auch
+      Sinn ergibt?
+  - Forschungsfrage
+    - Kann DevOps in jedem Unternehmen eingesetzt werden?
+    - Welche Umstände im Unternehmen müssen erfüllt sein, damit DevOps adaptiert
+      werden kann?
+  - Vorherige Arbeit
+    - https://www2.deloitte.com/content/dam/Deloitte/nl/Documents/technology/deloitte-nl-etp-devops-point-of-view.pdf
+    - https://www.infosys.com/agile-devops/Documents/devops-driving-agility.pdf
+    -
+- Microservices vs. Monolith - Performance, Erweiterbarkeit, Wartbarkeit
+  - Relevanz
+    - Durch Plattformen wie Kubernetes und FaaS wird es zunehmend einfacher
+      Systeme in kleine unabhängige Komponenten zu teilen
+    - Bessere Erweiterbarkeit, Wartbarkeit, multi-team entwicklung
+    - Schlechtere Transparenz, Keine Developer umgebungen schnell aufgebaut, Performance (mehr Netzwerkanfragen)
+  - Forschungsfrage
+    - Unter welchen Umständen lohnt sich der Overhead von Microsercives anstatt
+      Monolithen zu bauen?
+  - Vorherige Arbeit
+    - TODO
+- Was macht gute technische Dokumentationen aus?
+  - Relevanz
+    - Gute Dokumentationen helfen bei Onboarding, Troubleshooting,
+      Wissensvermittlung, ...
+    - Wenn Dokumentation nicht gut ist, wird diese nicht benutzt
+  - Forschungsfrage
+    - Was macht gute Dokumentation aus?
+  - Vorherige Arbeit
+    - https://documentation.divio.com
+    - IEEE "A standard for software documentation" - https://doi.org/10.1109/2.625327
+    - IEEE/ISO/IEC 26511-2018
+    - IEEE/ISO/IEC 26512-2017
+    - Ehemals ANSI/ANS 10.3-1995
+    - ISO ICS 01.110 - https://www.iso.org/ics/01.110/x/
+    - https://about.gitlab.com/handbook/business-ops/data-team/documentation/
+    - https://www.altexsoft.com/blog/business/technical-documentation-in-software-development-types-best-practices-and-tools/
+- Zero Trust IT-Systeme - Sicherheit, egal von wo sich verbunden wird, ZTNZ
+  - Relevanz
+    - In Zeiten von Remote Work und Cloud Computing muss sich die Frage gestellt werden, ob VPNs
+      überhaupt noch betrieben werden sollen, wenn es von fast allen AN genutzt
+      wird
+    - Höhere Sicherheit ist ein Ziel jeder Organisation
+  - Forschungsfrage
+    - Ist Zero-Trust-Networking sicherer als traditionelle Netzwerksegmentierung?
+  - Vorherige Arbeit
+    - TODO
+- Propagator Networks
+  - Relevanz
+    - TODO
+  - Forschungsfrage
+    - TODO
+  - Vorherige Arbeit
+    - https://bitbucket.org/0x6a62/propagator/src/dev/reference/

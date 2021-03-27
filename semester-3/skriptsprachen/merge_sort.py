@@ -8,7 +8,7 @@ def merge(list1, list2):
   return rl + list1 + list2
 
 def merge_sort(l):
-  if len(l) == 1:
+  if len(l) <= 1:
     return l
   middle = len(l) // 2
   first, second = l[:middle],l[middle:]
@@ -16,7 +16,7 @@ def merge_sort(l):
 
 import random
 
-unsorted = random.sample(range(10,99), 7)
+unsorted = random.sample(range(10,99), 15)
 
 print(unsorted)
 print(merge_sort(unsorted))
