@@ -1,0 +1,85 @@
+- Was sind Monolithen und Microservices?
+  - Was ist Software Architektur?
+    - 4+1 Modell
+      - Logical
+      - Implementation
+      - Process
+      - Deployment
+      - Scenarios
+    - Architektur Styles
+      - Layered architectureal style
+    - Non-functional requirements (-ilities)
+      - Geschwindigkeit kommt von Maintainability, Testability, und Deployabaility
+    - Markt verändert sich zunehmend schneller
+      - Unternehmen, die relevant bleiben möchten, müssen schnell innovieren können
+        und scheller bessere Software schreiben
+      - DevOps report hat herausgefunden, dass kurze Leadtime und deployment
+        frequency, kurze MTTR, change failure rate
+    - Modernes Software development ist
+      - Process
+        - Automatisierung mit CI/CD
+        - DevOps
+      - Organization
+        - Kleine, Automone Teams
+      - Architektur
+        - Unterstützt Organisation
+        - Was ist eine gute Architektur, damit Business requirments erreicht
+          werden können?
+    - Was sind Monolithen?
+      - Implementations View ist eine einzelne Binary/einzelnes Objekt
+      - Funktioniert gut, solange Applikation klein ist und von einem Team
+        betreut werden kann
+      - Erfolgreiche Applikationen wachsen
+      - Probleme, wenn mehrere Teams an selber Applikation arbeiten
+        - Warum werden die -ilities gebrochen?
+      - Technologie wird zunehmend obsolet, abwer ein Rewrite ist nicht wirtschaftlich
+    - Was sind Microservices?
+      - Eine Reihe an "loosely coupled" Services, die eine Business funktion
+        abbilden oder eine unterstützen
+      - Jedes Team kann an eigener Komponente/Service arbeiten
+      - Warum werden -ilities jetzt wieder hergestellt?
+      - Neue Probleme
+        - Datenkonsistenz
+        - Backup/Wiederherstellung
+        - Wie kann man sicherstellen, dass API noch geändert werden kann?
+        - InterProcessComminucation
+        - Partial failure
+        - Integration und e2e tests
+        - Einiges gelöst durch Tooling
+          - EC2, Container, Kubernetes, CloudFormation, ...
+        - Kosten?
+      - Architektur enables Prozess und Organisation, Organisation enables Prozess
+        - Services sind Testbar und Deploybar
+        - Teams haben eigene Services
+        - Man kann im kleinen ausprobieren und lessons learned an andere Teams weitergeben
+          - Technologie kann inkrementell geupdated werden
+    - Nachteile
+      - Für alles gibt es Vor und Nachteile
+      - Komplexität innerhalb einer Applikation wird durch Komplexität in
+        Organisation und Kommunikation ausgetauscht
+    - Ist MSA richtig für meine Applikation/Organisation?
+      - automated testing
+      - automated provisioning
+        - IaC, CI/CD
+      - It depends
+- Anforderungen an die Instrastruktur, wenn MSA genutzt wird
+  - Performance
+- Anforderung an die Organisation und Entwicklung
+  - Cross functional teams necessary?
+  - Viel automatisierung
+  - Team struktur muss an einzelne Services ausgerichtet sein?
+  - Ändernde Anforderungen leichter oder schwieriger umzusetzen?
+  - Plattformen vereinfachen deployment (eg. Kubernetes, FaaS, ...)
+- Fazit
+
+- Einleitung
+- Definition von Microservices und Unterschiede zu Monolithen
+- Wann können Microservices genutzt werden?
+- Wann ist es nicht möglich Microservices zu nutzen?
+- Fazit
+
+- https://d-nb.info/105865490X/34
+- http://eds.a.ebscohost.com/eds/pdfviewer/pdfviewer?vid=3&sid=7f5c00f1-5ba3-4e60-ab26-e13e6c5472b2%40sdc-v-sessmgr01
+- https://link.springer.com/content/pdf/10.1007/s00287-004-0380-2.pdf
+- http://eds.a.ebscohost.com/eds/pdfviewer/pdfviewer?vid=2&sid=24c4ea30-4bf1-481e-a76a-8ce27ca802b4%40sdc-v-sessmgr02
+- https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf

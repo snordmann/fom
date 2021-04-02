@@ -37,7 +37,17 @@
     - Unter welchen Umständen lohnt sich der Overhead von Microsercives anstatt
       Monolithen zu bauen?
   - Vorherige Arbeit
-    - TODO
+    - Monlith vs. Microservice - https://ieeexplore.ieee.org/document/9368571 (10.1109/AICT50176.2020.9368571)
+    - Migration with Strangler Fig -
+      https://ieeexplore.ieee.org/document/9359092 (10.1109/ICS51289.2020.00107)
+    - Challenges in MicroServices - https://ieeexplore.ieee.org/document/9282637
+      (10.1109/QRS-C51114.2020.00107)
+    - Migrating Monolith to MS - https://ieeexplore.ieee.org/document/9211252 (10.1109/ICIMTech50083.2020.9211252)
+    - What is complexity in MS - https://ieeexplore.ieee.org/document/9101318 (10.1109/ICSA47634.2020.00024)
+    - Why migrate vom MA to MSA - https://ieeexplore.ieee.org/document/8990350 (10.110ß9/ISSREW.2019.00050)
+    - Classification on Migration Approaches - https://arxiv.org/abs/1807.10059
+      (10.1007/978-3-030-06019-0_10)
+    - Comparision of MA and MSA - https://ieeexplore.ieee.org/document/9109514 (10.1109/MEMSTECH49584.2020.9109514)
 - Was macht gute technische Dokumentationen aus?
   - Relevanz
     - Gute Dokumentationen helfen bei Onboarding, Troubleshooting,
