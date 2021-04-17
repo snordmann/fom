@@ -4,7 +4,7 @@
 
 ### Name
 
-Bread and Butter
+Bread'N'Butter
 
 ### Projektmitglieder
 
@@ -44,7 +44,7 @@ Wann wäre das Projekt ein Erfolg?
 Welche Aufgaben müssen erfüllt werden, um das Ziel zu erreichen?
 Welche konkreten Ergebnisse sollen im Projekt erstellt werden?
 
-- Milestone 0 "Design und Prerquisites"
+- Milestone 0 "Design und Prerequisites"
   - Wireframe wurde erstellt
   - API wurde designed
   - Logo wurde erstellt
@@ -60,7 +60,7 @@ Welche konkreten Ergebnisse sollen im Projekt erstellt werden?
 - Milestone 2 "Erweiterte Einkaufsliste"
   - Es können nicht-rezept Einträge zur Einkaufsliste hinzugefügt werden
   - Nutzer können sich selbst registrieren
-  - Dinge des täglichen Bedarfs werden automatisch in nuterdefinierten
+  - Dinge des täglichen Bedarfs werden automatisch in nutzerdefinierten
     Intervallen auf die Einkaufsliste gesetzt
 - Milestone 3 "Erweiterte Rezeptfunktionen"
   - Benachrichtigungen können an den Nutzer gesendet werden (Email, Push

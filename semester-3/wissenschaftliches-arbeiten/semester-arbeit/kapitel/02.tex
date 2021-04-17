@@ -1,23 +1,51 @@
 \newpage
-\section{Grundlagen der Microservice Architektur und Abgrenzung zu
-Monolithischen Architekturen} \label{grundlagen}
+\section{Microservice Architekturen} \label{msa}
+
+% Im Kapitel \ref{msa} wird zunächst die MSA erklärt und in die allgemeinen
+% Software Architektur eingeordnet. Auch wiord in diesem Kapitel die Monolithische
+% Architektur vorgestellt und mit der MSA kontrastiert.
+
+MSA ist ein Architekturmuster, das eine Applikation in viele Services aufteilt.
+Die einzelnen Services sind lose miteinander gekoppelt, wodurch unabhängige
+Entwicklung und Bereitstellung des Services ermöglicht werden.
 
 \subsection{Definition von Microservice Architekturen}
 
-\begin{itemize}
-  \item Was sind Microservice Architekturen
-  \item Was sind Microservice Architekturen nicht
-  \item Typische Referenzbilder/Architekturdiagramme
-\end{itemize}
+Um eine schlüssige Definition von MSA zu geben, stützt sich dieser Arbeit auf
+die Ansichten von Martin Fowler. Fowler ist ein Autor mehrerer Bücher zum
+Thema Softwarearchitektur\footnote{TODO: Referenzen einfügen}.
 
-\subsection{Microservice Architekturen im Zusammenhang von Software Architekturen}
+Auf seinem Blog nennt Fowler folgende Eigenschaften von
+MSA\footnote{https://www.martinfowler.com/articles/microservices.html}:
 
-\begin{itemize}
-  \item
-\end{itemize}
+\begin{enumerate}
+  \item Komponenten als Services
+  \item Organisation um Unternehmensfunktionen
+  \item Produkte, nicht Projekte
+  \item Schlaue Endpunkte und dumme Verbindungen
+  \item Dezentralisierte Steuerung
+  \item Dezentralisierte Datenverwaltung
+  \item Infrastrukturautomatisierung
+  \item Design für Fehlerresistenz
+  \item Evolutionäres Design
+\end{enumerate}
 
-\subsection{Abgrenzung zu Monolithischen Architekturen}
+\subsubsection{Komponenten als Services}
 
-\begin{itemize}
-  \item
-\end{itemize}
+Fowler beschreibt Komponenten als eine Softwareeinheit, die unabhängig von
+anderen Komponenten ausgetauscht und geupgraded werden kann. Traditionell werden
+diese Komponenten als Bibliothek bereitgestellt. Laut Fowler sind Bibliotheken
+Komponenten, die im Programm gelinkt sind und über in-memory Funktionen
+aufgerufen werden. Services hingegen sind Komponenten, die außerhalb des
+Prozesses laufen und über Mechanismen wie Web Service Aufrufe oder \ac{RPC}
+aufgerufen werden.
+
+Fowler nennt die unabhängige Deploybarkeit als zentralen Vorteil von Services
+gegenüber Bibliotheken. Um eine Bibliothek zu aktualisieren muss der komplette
+Hauptprozess inklusive anderer Bibliotheken neu bereitgestellt werden. Bei
+Services kann jeder Service unabhängig von den anderen aktualisiert werden -
+vorrausgesetzt die \ac{API} verändert sich nicht.
+
+Natürlich gibt es auch Nachteile von Services gegenüber Bibliotheken. Laut
+Fowler sind RPC teurer als Zugriffe über den geteilten Speicher. Ebenfalls ist
+die Migration von Funktionen von einem Service zum anderen schwieriger.
