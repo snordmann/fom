@@ -5,47 +5,107 @@
 % Software Architektur eingeordnet. Auch wiord in diesem Kapitel die Monolithische
 % Architektur vorgestellt und mit der MSA kontrastiert.
 
-MSA ist ein Architekturmuster, das eine Applikation in viele Services aufteilt.
-Die einzelnen Services sind lose miteinander gekoppelt, wodurch unabhängige
-Entwicklung und Bereitstellung des Services ermöglicht werden.
+MSA ist ein Architekturmuster für verteilte Systeme, das ein Informationssystem
+in viele Services aufteilt. Die einzelnen Services sind lose miteinander
+gekoppelt, wodurch unabhängige Entwicklung und Bereitstellung des Services
+ermöglicht werden.
 
 \subsection{Definition von Microservice Architekturen}
 
 Um eine schlüssige Definition von MSA zu geben, stützt sich dieser Arbeit auf
-die Ansichten von Martin Fowler. Fowler ist ein Autor mehrerer Bücher zum
-Thema Softwarearchitektur\footnote{TODO: Referenzen einfügen}.
+die Ansichten von Martin Fowler und James Lewis. Fowler ist ein Autor mehrerer Bücher zum Thema
+Softwarearchitektur\footnote{TODO: Referenzen einfügen} und wird bei
+wissenschaftlichen Arbeiten mit Peer-Review zitiert\footnote{TODO: Referenzen
+einfügen}.
 
 Auf seinem Blog nennt Fowler folgende Eigenschaften von
 MSA\footnote{https://www.martinfowler.com/articles/microservices.html}:
 
 \begin{enumerate}
-  \item Komponenten als Services
-  \item Organisation um Unternehmensfunktionen
-  \item Produkte, nicht Projekte
-  \item Schlaue Endpunkte und dumme Verbindungen
-  \item Dezentralisierte Steuerung
-  \item Dezentralisierte Datenverwaltung
-  \item Infrastrukturautomatisierung
-  \item Design für Fehlerresistenz
-  \item Evolutionäres Design
+  \item \textbf{Komponenten als Services}\label{componentes-as-service} \\
+        Softwareeinheiten, die unabhängig von anderen entwickelt und
+        ausgetauscht werden können, werden nicht als Bibliothek (=in-memory
+        Funktionen), sondern als Service, der außerhalb des Prozesses laufen und
+        über Web Service Requests und Remote Procedure Calls aufgerufen werden, bereitgestellt
+  \item \textbf{Organisation um Unternehmensfunktionen} \\
+        Teams werden nicht nach Fachbereich (bspw. Frontend, Backend,
+        Datenbanken), sondern nach Unternehmensfunktion organisiert
+  \item \textbf{Produkte, nicht Projekte} \\
+        Es gibt keine Trennung zwischen Entwicklung des Services und dessen
+        Betrieb. Beides wird aus der selben Organisationseinheit geleistet
+  \item \textbf{Schlaue Endpunkte und dumme Verbindungen} \\
+        Die Kommunikation zwischen den Services ist so einfach wie möglich. Ein
+        Anti-Pattern ist es Logik zum Routen oder Transformieren der Nachricht
+        in den Message Broker zu abstrahieren\footnote{TODO Besseres Wort}.
+  \item \textbf{Dezentralisierte Steuerung} \\
+        Es gibt wenige IT Standard, an die die Teams gebunden sind. Stattdessen
+        werden best practice Lösungen eigenständig erarbeitet und verbreitet.
+  \item \textbf{Dezentralisierte Datenverwaltung} \\
+        Jeder Service hat seine eigene Datenbank
+  \item \textbf{Infrastrukturautomatisierung} \\
+        Viele Prozesse der Entwicklung und Bereitstellung von Services sind
+        automatisiert. Automatisierte Tests geben Vertrauen und automatisierte
+        Bereitstellung hilft gegen menschliches Versagen
+  \item \textbf{Design für Fehlerresistenz} \\
+        Die Services sind so geschrieben, dass sie Fehler in anderen Services
+        aushalten können
+  \item \textbf{Evolutionäres Design} \\
+        Die Auswahl, Größe und Grenzen eines Services können sich über die Zeit
+        verändern, um besser verwaltbar zu sein
 \end{enumerate}
 
-\subsubsection{Komponenten als Services}
 
-Fowler beschreibt Komponenten als eine Softwareeinheit, die unabhängig von
-anderen Komponenten ausgetauscht und geupgraded werden kann. Traditionell werden
-diese Komponenten als Bibliothek bereitgestellt. Laut Fowler sind Bibliotheken
-Komponenten, die im Programm gelinkt sind und über in-memory Funktionen
-aufgerufen werden. Services hingegen sind Komponenten, die außerhalb des
-Prozesses laufen und über Mechanismen wie Web Service Aufrufe oder \ac{RPC}
-aufgerufen werden.
+\subsection{Vergleich zu Monolithen}\label{compare-monolith}
 
-Fowler nennt die unabhängige Deploybarkeit als zentralen Vorteil von Services
-gegenüber Bibliotheken. Um eine Bibliothek zu aktualisieren muss der komplette
-Hauptprozess inklusive anderer Bibliotheken neu bereitgestellt werden. Bei
-Services kann jeder Service unabhängig von den anderen aktualisiert werden -
-vorrausgesetzt die \ac{API} verändert sich nicht.
+In vielen Arbeiten und auch bei der Definition von Fowler und Lewis werden
+Microservices - ein Architekturmuster für verteilte Systeme - mit Monolithen -
+einem nicht verteiltem System - verglichen.
 
-Natürlich gibt es auch Nachteile von Services gegenüber Bibliotheken. Laut
-Fowler sind RPC teurer als Zugriffe über den geteilten Speicher. Ebenfalls ist
-die Migration von Funktionen von einem Service zum anderen schwieriger.
+Bei Monolithen handelt es sich um ein Architekturparadigma bei dem alle
+Komponenten für ein Informationssystem auf einem Server laufen (Vgl. Punkt
+\ref{componentes-as-service}). Auch wenn einige Funktionen außerhalb des Servers
+laufen, kann es noch immer als Monolith kategorisiert werden. Häufig werden
+Datenbanken auf anderen Servern betrieben.
+
+Es igibt in der Praxis auch hybride Formen. Diese entstehen dadurch, dass
+zunächst ein Monolith besteht und dann neue Funktionen in anderen Services
+ausgelagert werden.
+
+%
+
+% \subsubsection{Komponenten als Services}
+
+% Fowler beschreibt Komponenten als eine Softwareeinheit, die unabhängig von
+% anderen Komponenten ausgetauscht und geupgraded werden kann. Traditionell werden
+% diese Komponenten als Bibliothek bereitgestellt. Laut Fowler sind Bibliotheken
+% Komponenten, die im Programm gelinkt sind und über in-memory Funktionen
+% aufgerufen werden. Services hingegen sind Komponenten, die außerhalb des
+% Prozesses laufen und über Mechanismen wie Web Service Aufrufe oder \ac{RPC}
+% aufgerufen werden.
+
+% Fowler nennt die unabhängige Deploybarkeit als zentralen Vorteil von Services
+% gegenüber Bibliotheken. Um eine Bibliothek zu aktualisieren muss der komplette
+% Hauptprozess inklusive anderer Bibliotheken neu bereitgestellt werden. Bei
+% Services kann jeder Service unabhängig von den anderen aktualisiert werden -
+% vorrausgesetzt die \ac{API} verändert sich nicht.
+
+% Natürlich gibt es auch Nachteile von Services gegenüber Bibliotheken. Laut
+% Fowler sind RPC teurer als Zugriffe über den geteilten Speicher. Ebenfalls ist
+% die Migration von Funktionen von einem Service zum anderen schwieriger.
+
+
+% https://www.martinfowler.com/articles/microservices.html#ComponentizationViaServices
+% https://www.martinfowler.com/articles/microservice-trade-offs.html
+% https://www.martinfowler.com/bliki/MicroservicePrerequisites.html
+% https://www.martinfowler.com/bliki/EvolutionarySOA.html
+% https://ui.adsabs.harvard.edu/abs/2019arXiv190604702F/abstract
+
+% https://www.oreilly.com/library/view/monolith-to-microservices/9781492047834/
+% https://www.torocloud.com/podcast/microservices-for-modern-software-development-james-lewis
+% https://samnewman.io/offerings/workshops/monolith-to-microservices-workshhop/
+% https://www.infoq.com/podcasts/monolith-microservices/
+% https://duckduckgo.com/?q=Stefan+Tilkov+microservices&t=osx&ia=web
+% https://duckduckgo.com/?q=Guerilla+SOA&t=osx&ia=web
+% https://duckduckgo.com/?q=Michael+Nygard+verb&t=osx&ia=web
+
+% https://www.youtube.com/watch?v=zzMLg3Ys5vI

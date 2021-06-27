@@ -1,5 +1,6 @@
-echo "Um dieses Skript zu nutzen muss detex auf dem Rechner installiert sein"
-echo "Unter macOS kann es mit dem folgenden Befehl installiert werden: brew install opendetex"
+#!/bin/bash
+#echo "Um dieses Skript zu nutzen muss detex auf dem Rechner installiert sein"
+#echo "Unter macOS kann es mit dem folgenden Befehl installiert werden: brew install opendetex"
 
 rm wordcounts.txt 2> /dev/null
 
@@ -10,11 +11,11 @@ BEGINNING="Einleitung"
 ENDING="Anhang"
 while read p; do
   # end txt when end was found
-  echo "$p" | grep $ENDING && break
+  echo "$p" | grep $ENDING >/dev/null && break
   if [ "$FOUNDBEGIN" == "y" ]
       then
           echo "$p" >>wordcounts.txt
-          # echo "$p" | sed 's/\[[\w. ]*\][[\w. ]*\]\w+\.\w+/ /g' >>wordcounts.txt
+          #echo "$p" | sed 's/\[[\w. ]*\][[\w. ]*\]\w+\.\w+/ /g' >>wordcounts.txt
   fi
   # start txt when beginning was found
   echo "$p" | grep $BEGINNING >/dev/null && FOUNDBEGIN="y"
