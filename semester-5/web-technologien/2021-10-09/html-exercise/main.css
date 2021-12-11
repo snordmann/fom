@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Inter:wght@400&display=swap');
+
+:root {
+  --main-bg-color: rgb(240,240,240);
+  --main-font-color: rgb(30,30,30);
+  --main-font-color-dark: rgb(10,10,10);
+  --accent-color: rgb(48, 119, 174);
+  --accouncement-bg-color: rgb(255, 45, 45);
+  --accouncement-font-color: rgb(28, 28, 28);
+}
+
+html, body {
+  /* Always show scroll bar */
+  height: 101%;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.announcement {
+  width: 100vw;
+  text-align: center;
+  background-color: var(--accouncement-bg-color);
+  color: var(--accouncement-font-color);
+}
+.announcement p {
+  padding: 0.5em 0;
+}
+
+p { margin: 0 0 1.5em 0; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Domine', serif;
+  margin: 0 0 0.5em 0;
+}
+
+h1, h2, h3 {
+  color: var(--accent-color);
+  letter-spacing: 0.1em;
+}
+
+h4, h5, h6 {
+  color: var(--main-font-color-dark);
+}
+
+span {
+  margin: 2em;
+  padding: 2em;
+  border: 1px red solid;
+}
+
+.container {
+  width: 85vw;
+  background-color: rgba(255,255,255,0.4);
+  margin: 0 auto;
+}
+
+.main {
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 1em;
+}

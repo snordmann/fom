@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotorBike</title>
+  <link rel="stylesheet" href="style.css?version=1">
+</head>
+<body>
+  <div class="header">
+    <div class="heading">
+      <h1>MotorBike</h1>
+      <h2>Motorisierte Fahrräder seit 1928</h2>
+    </div>
+    <div class="logo">
+      <img src="logo.svg?version=1" alt="Unser Logo">
+    </div>
+
+    <div class="partner">
+      <h3>Unsere Partner</h3>
+      <ul>
+        <li><a href="https://www.formula1.com">Formel 1</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div id="Suche">
+      <form>
+        <fieldset>
+          <legend>Finde dein Bike!</legend>
+          <table>
+            <tr>
+              <th><label for="name">Name</label></th>
+              <td><input type="text" id="name" name="name" placeholder="Name"/></td>
+            </tr>
+            <tr>
+              <th><label for="type">Fahrradtyp</label></th>
+              <td><input type="text" id="type" name="type" placeholder="Fahrradtyp"/></td>
+            </tr>
+            <tr>
+              <th><label for="motor">Motorart</label></th>
+              <td>
+                <div><input type="radio" id="2takt" name="motor" value="2takt" /><label for="2takt">2-Takter</label></div>
+                <div><input type="radio" id="4takt" name="motor" value="4takt" /><label for="4takt">4-Takter</label></div>
+                <div><input type="radio" id="diesel" name="motor" value="diesel" /><label for="diesel">Diesel</label></div>
+              </td>
+            </tr>
+            <tr>
+              <th>Weitere Optionen</th>
+              <td><input type="checkbox" value="anmelden" id="anmelden"/><label for="anmelden">Nur anmeldefreie Fahrräder anzeigen</label></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><button value="search" id="search">Los!</button></td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

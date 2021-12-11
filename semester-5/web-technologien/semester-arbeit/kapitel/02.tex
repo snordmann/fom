@@ -1,0 +1,52 @@
+\newpage
+\section{Konzepte in JavaScript Frameworks} \label{konzepte}
+
+Bevor in dieser Arbeit konkrete Frameworks vorgestellt werden, müssen einige
+Begriffe und Konzepte erklärt werden. Es wird uns später helfen, eine
+Klassifizierung vorzunehmen.
+
+\subsection{\acl{SPA}}
+
+Eine \acr{SPA} ist eine Web Applikation oder Website, die dynamisch die Inhalte
+ändert, ohne auf eine neue Website umzuleiten. Ein Nutzer interagiert mit der
+Seite, woraufhin client-seitiges JavaScript die Website verändert (durch
+Hinzufügen, Verändern oder Entfernen von \acs{DOM}-Elementen).
+
+Eine typische Interaktion ist in Abbildung \ref{fig:spa-interactions} illustriert.
+Beim ersten Aufruf der Website, werden HTML, CSS und JavaScript Dateien an den
+Client gesendet. Der Client rendert dann die Website für den Benutzer.
+Wenn der User mit der Website interagiert kann es sein, dass neue Daten vom Server
+abgefragt werden müssen. Anstatt auf eine neue Website zu navigieren, sendet der
+Client ein Fetch - die neue Version der \ac{XHR} \ac{API} - an den Server (oder eine andere
+Backend API), und bekommt eine Antwort, die der client-seitige JavaScript Code
+interpretiert. Danach wird das DOM entsprechend angepasst.
+
+\begin{figure}[H]
+  \centering
+  \caption[]{Interaktionen zwischen Client und Server bei SPAs}
+  \label{fig:spa-interactions}
+  \begin{sequencediagram}
+    \newthread{A}{Client}{}
+    \newinst[3]{B}{Website}{}
+
+    \begin{call}{A}{Initialer Aufruf}{B}{HTML und JavaScript}
+    \end{call}
+
+    \begin{call}{A}{Fetch API/XHR}{B}{JSON/plain text/HTML}
+    \end{call}
+  \end{sequencediagram}
+\end{figure}
+
+Ein Vorteil von dieser Vorgehensweise ist, dass, obwohl der Initiale Aufruf
+recht lange dauert, alle weiteren Änderungen recht schnell möglich sind.
+
+- Konzepte
+  - SPA
+  - PolyFill und babel/webpack
+  - Virtual DOM
+  - Opinionated
+  - Two way data binding
+  - Custom Components
+  - SSR
+  - MVC
+  - TypeScript / JavaScript / JSX

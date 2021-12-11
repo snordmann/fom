@@ -1,0 +1,84 @@
+/* type: css */
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Inter:wght@400&display=swap');
+
+:root {
+  --main-bg-color: rgb(240,240,240);
+  --main-font-color: rgb(30,30,30);
+  --main-font-color-dark: rgb(10,10,10);
+  --accent-color: rgb(48, 119, 174);
+}
+
+html, body {
+  /* Always show scroll bar */
+  height: 101%;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Domine', serif;
+}
+h1 { font-size: 3em; }
+h2 { font-size: 1.5em; }
+
+span {
+  padding: 5em;
+}
+
+.header {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+}
+
+.heading {
+  width: 35vw;
+  flex: 1;
+}
+.header h1 {
+  color: var(--accent-color);
+}
+
+.logo {
+  width: 35vw;
+  flex: 1;
+}
+.logo img {
+  width: 15rem;
+
+  transition: all 0.5s ease 0.2s;
+  -moz-transition: all 0.5s ease 0.2s;
+  -webkit-transition: all 0.5s ease 0.2s;
+}
+.logo img:hover {
+  filter: invert(42%);
+}
+
+.partner {
+  width: 35vw;
+  flex: 2;
+}
+
+.content {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.content #Suche {
+  flex: 1;
+}
+
+#Suche tr {
+  height: 2em;
+}
+#Suche th {
+  text-align: right;
+  padding-right: 1.5em;
+}
+#Suche button {
+  padding: 0 2em;
+}
