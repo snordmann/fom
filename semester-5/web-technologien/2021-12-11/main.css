@@ -3,3 +3,16 @@ h1 {
   text-align: center;
   background-color: burlywood;
 }
+
+body {
+  background-color: gray;
+}
+
+/* div.content {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 6.5em auto auto;
+} */
+
+p {
+}
