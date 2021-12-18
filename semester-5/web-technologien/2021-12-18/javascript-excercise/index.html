@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+  <title>TA-Lagermanagement</title>
+</head>
+
+<body>
+  <h1>Lagerartikel</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Artikel</th>
+        <th>Ist-Bestand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Muffe</td>
+        <td id="anzmuff">200 Stück</td>
+      </tr>
+      <tr>
+        <td>Flansch</td>
+        <td id="anzflan">46 Stück</td>
+      </tr>
+      <tr>
+        <td>Buchsen</td>
+        <td id="anzbuch">42 Stück</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <tr>
+      <td><label for="artikel">Artikel</label></td>
+      <td><input type="text" id="artikel" /></td>
+    </tr>
+    <tr>
+      <td><label for="menge">Menge</label></td>
+      <td><input type="number" id="menge" min="0" max="200" value="0" /></td>
+    </tr>
+    <tr>
+      <td><button onclick="einlagern()">Einlagern</button></td>
+      <td><button onclick="auslagern()">Auslagern</button></td>
+    </tr>
+
+  </table>
+
+
+  <script>
+
+    function get_menge() {
+      set_text("anzmuff", localStorage.getItem("anzmuff") || 0)
+      set_text("anzflan", localStorage.getItem("anzflan") || 0)
+      set_text("anzbuch", localStorage.getItem("anzbuch") || 0)
+    }
+
+    get_menge()
+
+    function get_artikel() {
+      artikel_text = document.getElementById("artikel").value;
+      switch(artikel_text) {
+        case "Muffe":
+          return "anzmuff";
+        case "Flansch":
+          return "anzflan";
+        case "Buchsen":
+          return "anzbuch";
+      }
+      return null;
+    }
+
+    function einlagern() {
+      artikel = get_artikel()
+      if (artikel == null) alert(`Artikel "${document.getElementById("artikel").value}" nicht gefunden`)
+
+      menge = parseInt(document.getElementById("menge").value);
+      if (isNaN(menge)) alert("Du bist blöd!");
+
+      bisheriger_wert = parseInt(document.getElementById(artikel).textContent);
+      if (isNaN(bisheriger_wert)) alert("Internal Server Error");
+
+      set_text(artikel, bisheriger_wert + menge);
+    }
+    function auslagern() {
+      artikel = get_artikel()
+      if (artikel == null) alert(`Artikel ${document.getElementById("artikel").value} nicht gefunden`)
+
+      menge = parseInt(document.getElementById("menge").value);
+      if (isNaN(menge)) alert("Du bist blöd!");
+      bisheriger_wert = parseInt(document.getElementById(artikel).textContent);
+      if (isNaN(bisheriger_wert)) alert("Internal Server Error");
+
+      neuer_wert = bisheriger_wert - menge;
+
+      if (neuer_wert < 0) {
+        alert("Du kannst nicht mehr auslagern als du hast!");
+      } else {
+        set_text(artikel, neuer_wert);
+      }
+    }
+    function set_text(artikel, wert) {
+      document.getElementById(artikel).textContent = `${wert} Stück`;
+      localStorage.setItem(artikel, wert);
+    }
+  </script>
+</body>
+</html>
